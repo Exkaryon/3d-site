@@ -1,8 +1,8 @@
 <template>
-    <div id="cover" :class="[activeTheme, {modalactive: modalActive}]">
+    <div id="cover" :class="[activeTheme, {modalactive: $store.state.activeModal}]">
         <TopBar @change-class="changeThemeClass"></TopBar>
         <SubMenu></SubMenu>
-        <Viewport :contentLoaded="contentLoaded" @modalactivator="changeModalActive"></Viewport>
+        <Viewport :contentLoaded="contentLoaded" ></Viewport>
         <Modal></Modal>
     </div>
 </template>
@@ -18,7 +18,6 @@ export default {
         return {
             activeTheme: 'mix',
             contentLoaded: false,
-            modalActive: false,
         }
     },
 
@@ -41,9 +40,7 @@ export default {
             }
         },
 
-        changeModalActive(val){
-            this.modalActive = val;
-        }
+
     },
 
 

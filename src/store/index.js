@@ -8,7 +8,7 @@ export default createStore({
             selectedCube: null,
             currentCubeMenu: null,
             activeCubeSide: null,
-            activeModalContent: null,
+            activeModal: false,
             fulcrum: false,
 
             // Статичные данные
@@ -39,8 +39,8 @@ export default createStore({
         setActiveCubeSide(state, sideName){
             state.activeCubeSide = sideName ? sideName : null;
         },
-        setActiveModalContent(state, article){
-            state.activeModalContent = article;
+        setActiveModal(state, val){
+            state.activeModal = val;
         }
     },
 
@@ -52,8 +52,9 @@ export default createStore({
                 case 'button':
                     commit('setSelectedCube', cubeName);
                     commit('setActiveCubeSide', cubeSide.classList[0]);
+
                     if(!state.actionsLock){
-                        commit('setActiveModalContent', cubeSide.dataset.name);
+                        commit('setActiveModal', true);
                     }
                     break;
                 case 'article':
@@ -61,10 +62,10 @@ export default createStore({
                         commit('setSelectedCube', cubeName);
                         commit('setActiveCubeSide', null);
                     }else{
-                        commit('setActiveCubeSide', cubeSide.classList[0]);
                         if(state.activeCubeSide == cubeSide.classList[0]){
-                            commit('setActiveModalContent', cubeSide.dataset.name);
+                            commit('setActiveModal', true);
                         }
+                        commit('setActiveCubeSide', cubeSide.classList[0]);
                     }
                     break;
                 case 'section':
@@ -88,8 +89,8 @@ export default createStore({
                     if(state.activeCubeSide != elemName){
                         commit('setActiveCubeSide', elemName);
                     }else{
-                        if(state.activeModalContent != link.dataset.name){
-                            commit('setActiveModalContent', link.dataset.name);
+                        if(state.activeModal != link.dataset.name){
+                            commit('setActiveModal', link.dataset.name);
                         }
                     }
                     break;

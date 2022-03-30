@@ -306,13 +306,13 @@ export default {
         },
 
 
-        transitionToCube(cubeName){
-            if(!cubeName) return;
+        transitionToCube(){
+            if(!this.currentCube) return;
             if(this.actionsLock) clearTimeout(this.transTime.ids.navi);
             this.$store.commit('setActionsLock', true);
             this.$store.commit('setCurrentCubeMenu', null);
 
-            const offset = this.$store.state.content[cubeName].offset;
+            const offset = this.$store.state.content[this.currentCube].offset;
             // Центрирование выбранного куба во viewport смещением wrapper.
             this.wrapper.CSS.props.transform.translateX[0] = offset.x * -this.cubes.size;
             this.wrapper.CSS.props.transform.translateY[0] = offset.y * -this.cubes.size;
@@ -334,7 +334,7 @@ export default {
 
             this.transTime.ids.navi = setTimeout(() => {
                 this.$store.commit('setActionsLock', false);
-                this.$store.commit('setCurrentCubeMenu', cubeName);
+                this.$store.commit('setCurrentCubeMenu', this.currentCube);
                 delete this.viewport.CSS.props.transition;
                 delete this.wrapper.CSS.props.transition;
                 this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
@@ -396,7 +396,7 @@ export default {
                 this.wrapper.CSS.props.transition = ['all '+this.transTime.navi+'s ease', ''];
                 this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
                 this.wrapper.CSS.text = this.CSSTextCompilator(this.wrapper.CSS.props);
-                this.$emit('modalactivator', this.modalActive);
+                this.$store.commit('setCurrentCubeMenu', this.currentCube);
                 this.transTime.ids.navi = setTimeout(() => {
                     this.$store.commit('setActionsLock', false);
                     delete this.viewport.CSS.props.transition;
@@ -408,7 +408,6 @@ export default {
                 clearTimeout(this.transTime.ids.modal)
                 this.viewport.CSS.props.transition = ['all '+this.transTime.navi+'s ease', ''];
                 this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
-                this.$emit('modalactivator', this.modalActive);
                 this.transTime.ids.modal = setTimeout(() => {
                     delete this.viewport.CSS.props.transition;
                     this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
@@ -435,7 +434,7 @@ export default {
         },
 
         modalActive(){
-            return this.$store.state.activeModalContent;
+            return this.$store.state.activeModal;
         }
     },
 
@@ -453,8 +452,8 @@ export default {
             this.intro();
         },
 
-        currentCube(nVal){
-            this.transitionToCube(nVal);
+        currentCube(){
+            this.transitionToCube();
         },
 
         activeCubeSide(nVal){

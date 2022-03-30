@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="shadow">&nbsp;</div>
-    <div class="close" @click="$store.commit('setActiveModalContent', null)">Закрыть</div>
+    <div class="close" @click="$store.commit('setActiveModal', false)">Закрыть</div>
 </div>
 </template>
 
@@ -16,9 +16,34 @@
 export default {
     name: 'Modal',
 
+
+
     methods: {
-        
+        showContent(){
+            if(this.$store.state.activeModal){
+                const ctn = this.$store.state.content[this.currentCube].sides[this.activeCubeSide]
+                
+                console.log(ctn)
+            }
+        }
+    },
+
+
+    computed: {
+        currentCube(){
+            return this.$store.state.selectedCube;
+        },
+        activeCubeSide(){
+            return this.$store.state.activeCubeSide;
+        },
+    },
+
+    watch: {
+        activeCubeSide(){
+            this.showContent();
+        }
     }
+
 }
 </script>
 
