@@ -2,53 +2,63 @@
     <div id="topbar">
         <nav>
             <div>
-                <a v-for="link in links" :key="link.id" v-bind:href="link.name" v-on:click.prevent="choiceCube">{{link.title}}</a>
+                <a v-for="link in $store.state.content" :key="link.name" v-bind:href="'#'+link.name" @click.prevent="$store.dispatch('linkNavi', $event.target)">{{link.title}}</a>
             </div>
         </nav>
-        <div class="fulcrum">
+        <div class="fulcrum" @click.prevent="[$store.commit('setFulcrum', Date.now()), $store.commit('setSelectedCube', null)]">
             &nbsp;
         </div>
-        <div class="themes_switcher">
+        <div class="themes_switcher" v-openator>
             <div>Тема:</div>
             <div>
-                <div v-for="theme in themes" :key="theme.id" v-bind:data-theme="theme.title.toLowerCase()" class="selected"><span>{{theme.title}}</span></div>
-            </div>  
+                <div v-for="theme in themes" :key="theme.id" v-bind:data-theme="theme.title.toLowerCase()" @click="changeTheme" :class="[theme.active ? 'selected' : '', theme.id === transElemId ? 'trans' : '']"><span>{{theme.title}}</span></div>
+            </div>
         </div>
 
     </div>
 </template>
 
 
+
+
 <script>
 export default {
     name: 'TopBar',
-    data(){
-        return {
-            links: [
-                {id: 0, name: '#about', title: 'Обо мне'},
-                {id: 1, name: '#biography', title: 'Биография'},
-                {id: 2, name: '#works', title: 'Опыт'},
-                {id: 3, name: '#command', title: 'Команда'},
-            ],
-            themes: [
-                {id: 0, title: 'Mix'},
-                {id: 1, title: 'Autumn'},
-                {id: 2, title: 'Winter'},
-                {id: 3, title: 'Spring-summer'},
-            ]
+
+    props: {
+        activeTheme: {
+            type:  String,
         }
     },
-    props: {
-        msg: String
-    },
-    methods: {
-        choiceCube: function(e){
-            console.log(e);
-        },
 
+    data(){
+        return {
+            themes: [
+                {id: 0, title: 'Mix', active: true},
+                {id: 1, title: 'Autumn', active: false},
+                {id: 2, title: 'Winter', active: false},
+                {id: 3, title: 'Spring-summer', active: false},
+            ],
+            changeThemeInProcess: false,
+            transElemId: false,
+        }
+    },
+
+    methods: {
+        changeTheme(e){
+            this.transElemId = this.themes.find(item => item.title == e.target.innerText).id;
+            setTimeout(() => {
+                this.themes.forEach(t => { t.active = t.title == e.target.innerText ? true : false; });
+                this.themes.sort((a,b) => b.active - a.active);
+                this.$emit('changeClass', e.target.innerText.toLowerCase())
+                this.transElemId = false;
+            }, 500);
+        }
     }
 }
 </script>
+
+
 
 
 <style scoped lang="scss">
@@ -139,7 +149,7 @@ export default {
                 border:solid 1px #fff9;
                 padding: 5px 25px 5px 10px;
                 border-radius: 10px;
-                min-width: 120px;
+                min-width: 155px;
                 top: -16px;
                 transform-origin: 140px center 0;
                 transition: transform 0.5s cubic-bezier(0.42, 0, 0.25, 1.51);
@@ -189,7 +199,7 @@ export default {
             }
         }
 
-        .active {
+        &.active {
             .selected {
                 transform: rotate(0deg);
                 & + div {
@@ -206,13 +216,89 @@ export default {
                 transform: rotate(0deg)!important;
             }
         }
+
     }
+
+
+
 }
 
+/* THEMES */
+.mix {
+    /* Nav & other links */
+    #topbar {
+        box-shadow:
+            0 0 140px #059d,
+            0 0 40px  #0595,
+            0 0 3px   #059 inset,
+            0 0 3px   #059 inset,
+            0 0 13px  #059 inset,
+            0 0 23px  #059 inset;
+        .fulcrum {
+            box-shadow:
+                0 0 90px #059,
+                0 0 50px #059,
+                0 0 20px #059,
+                0 0 20px #059 inset,
+                0 0 10px #0595 inset;
+                &:hover {
+                    box-shadow:
+                        0 0 90px #f00a,
+                        0 0 50px #f00a,
+                        0 0 20px #f00a,
+                        0 0 10px #f00 inset,
+                        0 0 20px #059 inset;
+                }
+        }
+        nav a {
+            text-shadow:
+                0 0 38px #059,
+                0 0 28px #059,
+                0 0 24px #059,
+                0 0 20px #059,
+                0 0 16px #059,
+                0 0 12px #059,
+                0 0 8px  #059,
+                0 0 4px  #059;
+            &:hover, &.selected {
+                text-shadow:
+                    0 0 38px #f00a,
+                    0 0 28px #f00a,
+                    0 0 24px #f00a,
+                    0 0 20px #f00a,
+                    0 0 16px #f00a,
+                    0 0 12px #f00a,
+                    0 0 8px  #f00a,
+                    0 0 4px  #f00a;
+            }
+            &::after {
+                background: linear-gradient(90deg, #0590, #059, #0590);
+            }
+        }
 
-
-
-
+        /* Switcher */
+        .themes_switcher div div {
+            &::after {
+                box-shadow:
+                    0 0 20px #0599 inset,
+                    0 0 20px #0599;
+            }
+            span {
+                text-shadow: 0 0 10px #059;
+            }
+            &::after {
+                box-shadow:
+                    0 0 20px #059 inset,
+                    0 0 20px #059;
+            }
+            &:hover::after {
+                box-shadow:
+                    0 0 20px #f00 inset,
+                    0 0 20px #f00;
+            }
+        }
+    }
+}
 
 
 

@@ -4,8 +4,12 @@ import './registerServiceWorker'
 import store from './store'
 
 import TopBar from './components/TopBar.vue'
+import SubMenu from './components/SubMenu.vue'
+import Viewport from './components/Viewport.vue'
+import Modal from './components/Modal.vue'
 
-
+import openator from './directives/VOpenator.js'
+import transformwrapper from './directives/VTransformwrapper.js'
 //const app = Vue.createApp(App);
 
 
@@ -16,7 +20,15 @@ import TopBar from './components/TopBar.vue'
 //const app = createApp(App);
 
 
-createApp(App).component('TopBar', TopBar).use(store).mount('#app')
+createApp(App)
+    .component('TopBar', TopBar)
+    .component('SubMenu', SubMenu)
+    .component('Viewport', Viewport)
+    .component('Modal', Modal)
+    .directive('openator', openator)
+    .directive('transformwrapper', transformwrapper)
+    .use(store)
+    .mount('#app');
 
 
 /*

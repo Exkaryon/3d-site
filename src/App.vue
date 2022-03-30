@@ -1,17 +1,65 @@
 <template>
-    <TopBar>sdsd</TopBar>
+    <div id="cover" :class="[activeTheme, {modalactive: modalActive}]">
+        <TopBar @change-class="changeThemeClass"></TopBar>
+        <SubMenu></SubMenu>
+        <Viewport :contentLoaded="contentLoaded" @modalactivator="changeModalActive"></Viewport>
+        <Modal></Modal>
+    </div>
 </template>
+
+
 
 
 <script>
 export default {
     name: 'App',
-    components: { }
+    components: { },
+    data(){
+        return {
+            activeTheme: 'mix',
+            contentLoaded: false,
+            modalActive: false,
+        }
+    },
+
+    methods: {
+        changeThemeClass(cls){
+            this.activeTheme = cls;
+        },
+
+        // Загрузка контента.
+        async getContentFromServer(){
+            try {
+                const url = `http://127.0.0.5:85/3dsite_data.php`;
+                const response = await fetch(url, { method:'GET' });
+                if(!response.ok) throw new Error(url); 
+                const data = await response.json();
+                this.$store.commit('setContent', data);
+                this.contentLoaded = true;
+            } catch (error) {
+                console.warn(error);
+            }
+        },
+
+        changeModalActive(val){
+            this.modalActive = val;
+        }
+    },
+
+
+    created(){
+        this.getContentFromServer();
+    }
 }
 </script>
 
 
+
+
 <style lang="scss">
+* {
+    box-sizing: border-box;
+}
 body {
     margin:0;
     font: 16px 'Proxima Nova', Arial;
@@ -21,10 +69,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    body:active {
+    &:active {
         cursor: grabbing;
     }
 }
-
-
 </style>
