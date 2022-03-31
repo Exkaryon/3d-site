@@ -263,4 +263,71 @@ export default {
     }
 }
 
+
+
+
+
+
+/* THEMES */
+.mix {
+    #modal {
+        color:#d2ebff;
+        h2 {
+            text-shadow:
+                0 0 30px #059,
+                0 0 25px #059,
+                0 0 15px #059,
+                0 0 10px #059,
+                0 0 5px #059,
+                0 0 3px #059;
+        }
+        .close {
+            &::before,
+            &::after {
+                box-shadow:
+                    0 0 15px #059,
+                    0 0 10px #059, 
+                    0 0 5px  #059, 
+                    0 0 4px  #059, 
+                    0 0 3px  #059, 
+                    0 0 2px  #059, 
+                    0 0 1px  #059;
+            }
+            &:hover {
+                text-shadow:
+                    0 0 38px #f00a,
+                    0 0 28px #f00a,
+                    0 0 24px #f00a,
+                    0 0 20px #f00a,
+                    0 0 16px #f00a,
+                    0 0 12px #f00a,
+                    0 0 8px  #f00a,
+                    0 0 4px  #f00a;
+                    &::before,
+                    &::after {
+                        box-shadow:
+                            0 0 15px #f00, 
+                            0 0 10px #f00, 
+                            0 0 5px  #f00, 
+                            0 0 4px  #f00, 
+                            0 0 3px  #f00, 
+                            0 0 2px  #f00, 
+                            0 0 1px  #f00;
+                    }
+            }
+        }
+        &::before {
+            background:
+                linear-gradient(0deg, #0590, #059, #0590),
+                linear-gradient(0deg, #0590, #059, #0590),
+                linear-gradient(0deg, #0590, #059, #0590);
+        }
+    }
+
+}
+
+
+
+
+
 </style>

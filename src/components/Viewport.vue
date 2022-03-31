@@ -432,7 +432,6 @@ export default {
         activeCubeSide(){
             return this.$store.state.activeCubeSide;
         },
-
         modalActive(){
             return this.$store.state.activeModal;
         }
@@ -468,14 +467,6 @@ export default {
             this.modalStateActivator();
         }
     },
-
-    // Далее:
-    // 1. Возможно стоит вынести "голову" и "хвост" методов переходов (transitionToCube, toFulcrum, intro) в отдельные функции для переиспользтвания.
-
-    // 3. Сделать компонент модального окна.
-    // 4. Возможно стоит заменить логику calcRelativity на более грамматную из starMadness. Посмотреть, где лучше содержать методы роуддегс и калкрелятивити.
-
-
 }
 </script>
 
@@ -598,6 +589,60 @@ export default {
                 }
             }
         }
+
+        .fragments {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: all 1s ease;
+        }
     }
+}
+
+
+/* THEMES */
+.mix {
+    #viewport{
+        .wrapper {
+            .cube {
+                > article {
+                    background: url(../assets/light_cube.jpg) center center no-repeat;
+                    background-size: cover;
+                    box-shadow: 0 0 45px #000 inset, 0 0 45px #f505;
+                    text-shadow: 0 0 5px #000;
+                    border: none;
+                    h2 {
+                        font-family: Boxed;
+                    }
+                     button {
+                        color: #fff;
+                        background: #035;
+                        border: solid 1px #0005;
+                        &::before {
+                            background: #000;
+                            box-shadow: 0 0 10px #000;
+                        }
+                        &:hover {
+                            border: solid 1px #f009;
+                        }
+                    }
+                }
+                &:hover > article {
+                    box-shadow: 0 0 45px #0005 inset, 0 0 15px #f00;
+                }
+            }
+
+            .fragments {
+                &.maple {background: url(../assets/maple.png) center center no-repeat;}
+                &.oak {background: url(../assets/oak.png) center center no-repeat;}
+                &.chestnut {background: url(../assets/chestnut.png) center center no-repeat;}
+                &.liquidambar {background: url(../assets/liquidambar.png) center center no-repeat;}
+                &.linden {background: url(../assets/linden.png) center center no-repeat;}
+            }
+
+        }
+    }
+
 }
 </style>
