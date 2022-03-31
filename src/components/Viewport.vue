@@ -45,7 +45,7 @@ export default {
                     modal: null,
                 },
                 intro: 1,
-                navi: 2.5,
+                navi: 1.5,
             },
             viewport: {
                 transformStates: {

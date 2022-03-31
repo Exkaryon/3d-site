@@ -1,10 +1,9 @@
 <template>
     <div id="modal">
-    <div class="container">
-        <h2>content</h2>
+    <div class="container" :class="{show: visibleContent}">
+        <h2>{{ article.title }}</h2>
         <div>
-            <p>Text</p>
-            <p>Text</p>
+            {{ article.fulltext }}
         </div>
     </div>
     <div class="shadow">&nbsp;</div>
@@ -16,15 +15,25 @@
 export default {
     name: 'Modal',
 
+    data(){
+        return {
+            article: {},
+            visibleContent: false,
+        }
+    },
+
 
 
     methods: {
-        showContent(){
-            if(this.$store.state.activeModal){
-                const ctn = this.$store.state.content[this.currentCube].sides[this.activeCubeSide]
-                
-                console.log(ctn)
-            }
+        updateContent(){
+            if(!this.currentCube || !this.activeCubeSide || !this.activeModal) return;
+            const article = this.$store.state.content[this.currentCube].sides[this.activeCubeSide];
+            if(article.name == this.article.name) return;
+            this.visibleContent = false;
+            setTimeout(() => {
+                this.article = article;
+                this.visibleContent = true;
+            } , 500);
         }
     },
 
@@ -36,11 +45,22 @@ export default {
         activeCubeSide(){
             return this.$store.state.activeCubeSide;
         },
+        activeModal(){
+            return this.$store.state.activeModal;
+        }
     },
 
     watch: {
+        currentCube(){
+            this.updateContent();
+        },
+
         activeCubeSide(){
-            this.showContent();
+            this.updateContent();
+        },
+
+        activeModal(){
+            this.updateContent();
         }
     }
 
