@@ -10,15 +10,19 @@
                 </article>
             </section>
 
+            <fragments :contentLoaded="contentLoaded" :viewportData="{win: win, cubes: {size: cubes.size, CSSprops: cubes.CSS.props.stack}}" :randomizer="randomizer" :CSSTextCompilator="CSSTextCompilator"></fragments>
+            
         </div>
     </div>
 </template>
 
 <script>
-
-
+import Fragments from '@/components/ViewportElements/Fragments.vue';
 
 export default {
+    components: {Fragments},
+
+
     name: 'Viewport',
 
 
@@ -589,14 +593,6 @@ export default {
                 }
             }
         }
-
-        .fragments {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            transform-style: preserve-3d;
-            transition: all 1s ease;
-        }
     }
 }
 
@@ -633,13 +629,7 @@ export default {
                 }
             }
 
-            .fragments {
-                &.maple {background: url(../assets/maple.png) center center no-repeat;}
-                &.oak {background: url(../assets/oak.png) center center no-repeat;}
-                &.chestnut {background: url(../assets/chestnut.png) center center no-repeat;}
-                &.liquidambar {background: url(../assets/liquidambar.png) center center no-repeat;}
-                &.linden {background: url(../assets/linden.png) center center no-repeat;}
-            }
+
 
         }
     }
