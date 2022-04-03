@@ -20,7 +20,6 @@ export default {
         CSSTextCompilator: {
             type: Function
         },
-
     },
 
 
@@ -43,7 +42,6 @@ export default {
 
         fragmentsGenerator(fragments = []){
             const sizes = this.randomizer(this.fragments.elemSize[0], this.fragments.elemSize[1]);
-
             const fragmentCSSProps = {
                 width: [sizes, 'px'],
                 height: [sizes, 'px'],
@@ -58,7 +56,6 @@ export default {
                     rotateY: [this.randomizer(0, 359), 'deg']
                 }
             }
-
             let ignoredCoords = {};
             let insideDetected = false;
             for(let cubeName in this.viewportData.cubes.CSSprops.stack){
@@ -70,7 +67,6 @@ export default {
                     Z: [this.viewportData.cubes.CSSprops.stack[cubeName].transform.translate3d[2] - this.viewportData.cubes.size / 2 - this.fragments.breakaway,
                         this.viewportData.cubes.CSSprops.stack[cubeName].transform.translate3d[2] + this.viewportData.cubes.size / 2 + this.fragments.breakaway]
                 }
-
                 let iterator = 0;
                 for(let axis in ignoredCoords[cubeName]){
                     if(!(fragmentCSSProps.transform.translate3d[iterator] > ignoredCoords[cubeName][axis][0] && fragmentCSSProps.transform.translate3d[iterator] < ignoredCoords[cubeName][axis][1])){
@@ -81,21 +77,18 @@ export default {
                     }
                 }
             }
-
             if(!insideDetected){
                 fragments.push({
                     CSSText: this.CSSTextCompilator(fragmentCSSProps),
                     class: this.fragments.classes[this.randomizer(0, this.fragments.classes.length - 1)]
                 });
             }
-
             this.fragments.limiter--;
             if(fragments.length < this.fragments.totalElements && this.fragments.limiter > 0){
                 this.fragmentsGenerator(fragments);
             }else{
                 this.fragments.elements = fragments;
             }
-
         },
 
     },
@@ -133,6 +126,31 @@ export default {
                 &.linden {background: url(../../assets/linden.png) center center no-repeat;}
             }
         }
+    }
+}
+
+/* Change themes animation */
+.collapse_fragments {
+    .fragments {
+        animation: transTheme 8s ease-in-out forwards !important;
+        &::before,
+        &::after {
+            transform: rotateY(0deg)!important;
+        }
+    }
+}
+
+@keyframes transTheme {
+    75% {
+        transform-origin: calc(100% * -22) calc(100% * -6); 
+    }
+    60% {
+        transform-origin: calc(100% * -52) calc(100% * 6); 
+    }
+    50% {
+        transform: translate3d(0px, 0px, -10000px) rotateX(360deg) rotateY(360deg) scale(0.1);
+        transform-origin: calc(100% * 52) calc(100% * -16) ; 
+        opacity: 0;
     }
 }
 </style>

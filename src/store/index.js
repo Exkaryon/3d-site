@@ -10,7 +10,13 @@ export default createStore({
             activeCubeSide: null,
             activeModal: false,
             fulcrum: false,
-
+            activeTheme: 'mix',
+            changeThemeProcess: {
+                status: false,
+                viewpoint: false,
+                fragmentsAnimation: false,
+                transitionTime: 1.5
+            },
             // Статичные данные
             content: {},
         }
@@ -41,7 +47,15 @@ export default createStore({
         },
         setActiveModal(state, val){
             state.activeModal = val;
-        }
+        },
+        setChangeThemeProcess(state, val){
+            state.changeThemeProcess.status = val[0];
+            state.changeThemeProcess.viewpoint = val[1];
+            state.changeThemeProcess.fragmentsAnimation = val[2];
+        },
+        setActiveTheme(state, theme){
+            state.activeTheme = theme;
+        },
     },
 
     actions: {
@@ -81,7 +95,7 @@ export default createStore({
                 case 'topbar':
                         commit('setSelectedCube', null);
                         commit('setActiveCubeSide', null);
-                        setTimeout(() => {  // Задержка для того, чтобы в компоненте отработало отслеживание изменения. 
+                        setTimeout(() => {  // Задержка для того, чтобы в компоненте было отслежено изменение состояния selectedCube. 
                             commit('setSelectedCube', elemName);
                         }, 50);
                     break;
@@ -95,7 +109,22 @@ export default createStore({
                     }
                     break;
             }
+        },
 
+
+        async changeTheme({state, commit}, themeName){
+            if(state.changeThemeProcess.status) return;
+            commit('setChangeThemeProcess', [true, false, false]);
+            await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+            commit('setChangeThemeProcess', [true, true, false]);
+            await new Promise((resolve, reject) => setTimeout(resolve, state.changeThemeProcess.transitionTime * 1000));
+            commit('setChangeThemeProcess', [true, true, true]);
+            await new Promise((resolve, reject) => setTimeout(resolve, 4000));
+            commit('setActiveTheme', themeName);
+            await new Promise((resolve, reject) => setTimeout(resolve, 4000));
+            commit('setChangeThemeProcess', [true, false, false]);
+            await new Promise((resolve, reject) => setTimeout(resolve, state.changeThemeProcess.transitionTime * 1000));
+            commit('setChangeThemeProcess', [false, false, false]);
         }
     }
 })

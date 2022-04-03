@@ -11,7 +11,7 @@
         <div class="themes_switcher" v-openator>
             <div>Тема:</div>
             <div>
-                <div v-for="theme in themes" :key="theme.id" v-bind:data-theme="theme.title.toLowerCase()" @click="changeTheme" :class="[theme.active ? 'selected' : '', theme.id === transElemId ? 'trans' : '']"><span>{{theme.title}}</span></div>
+                <div v-for="(theme, index) in themes" :key="index" v-bind:data-theme="theme.title.toLowerCase()" @click="themeSelection(index, $event.target)" :class="[theme.active ? 'selected' : '', index === transElemIndex ? 'trans' : '']"><span>{{theme.title}}</span></div>
             </div>
         </div>
 
@@ -26,33 +26,37 @@ export default {
     name: 'TopBar',
 
     props: {
-        activeTheme: {
-            type:  String,
-        }
+
     },
 
     data(){
         return {
             themes: [
-                {id: 0, title: 'Mix', active: true},
-                {id: 1, title: 'Autumn', active: false},
-                {id: 2, title: 'Winter', active: false},
-                {id: 3, title: 'Spring-summer', active: false},
+                {title: 'Mix', active: true},
+                {title: 'Autumn', active: false},
+                {title: 'Winter', active: false},
+                {title: 'Spring-summer', active: false},
             ],
-            changeThemeInProcess: false,
-            transElemId: false,
+            transElemIndex: false,
         }
     },
 
     methods: {
-        changeTheme(e){
-            this.transElemId = this.themes.find(item => item.title == e.target.innerText).id;
+        themeSelection(index, target){
+            if(this.blockedSwitcher) return;
+            this.transElemIndex = index;
             setTimeout(() => {
-                this.themes.forEach(t => { t.active = t.title == e.target.innerText ? true : false; });
+                this.themes.forEach(t => { t.active = t.title == target.innerText ? true : false; });
                 this.themes.sort((a,b) => b.active - a.active);
-                this.$emit('changeClass', e.target.innerText.toLowerCase())
-                this.transElemId = false;
+                this.transElemIndex = false;
+                this.$store.dispatch('changeTheme', target.innerText.toLowerCase());
             }, 500);
+        }
+    },
+
+    computed: {
+        blockedSwitcher(){
+            return this.$store.state.changeThemeProcess.status;
         }
     }
 }

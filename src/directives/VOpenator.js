@@ -4,8 +4,10 @@ export default {
     mounted(el, binding, vnode){
         let tId = 0;
         el.addEventListener('mouseover', () => {
-            el.classList.add('active');
-            clearTimeout(tId);
+            if(!binding.instance.blockedSwitcher){
+                el.classList.add('active');
+                clearTimeout(tId);
+            }
         });
         el.addEventListener('mouseout', () => {
             tId = setTimeout(() => {

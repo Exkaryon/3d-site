@@ -1,5 +1,5 @@
 <template>
-    <div id="viewport" :style="viewport.CSS.text">
+    <div id="viewport" :style="viewport.CSS.text" :class="{collapse_fragments: $store.state.changeThemeProcess.viewpoint}">
         <div class="wrapper" :style="wrapper.CSS.text" v-transformwrapper>
 
             <section v-for="cube in $store.state.content" :key="cube.name" :class="['cube', cube.name]" :style="[cubes.CSS.text.common, cubes.CSS.text.stack[cube.name]]" @click="$store.dispatch('interactiveNavi', $event.target)">
@@ -61,7 +61,7 @@ export default {
                     },
                     fulcrum: {
                         scale: [0.4, '']
-                    }
+                    },
                 },
                 CSS: {
                     props: {},
@@ -118,7 +118,7 @@ export default {
                         translateX: [0, 'px'],
                         translateY: [0, 'px'],
                         translateZ: [0, 'px'],
-                    } 
+                    },
                 },
                 CSS: {
                     props: {},
@@ -301,11 +301,11 @@ export default {
             this.wrapper.CSS.text = this.CSSTextCompilator(this.wrapper.CSS.props);
             // Подождать проигрывание перехода.
             this.transTime.ids.navi = setTimeout(() => {
+                this.$store.commit('setActionsLock', false);
                 delete this.viewport.CSS.props.transition;
                 delete this.wrapper.CSS.props.transition;
                 this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
                 this.wrapper.CSS.text = this.CSSTextCompilator(this.wrapper.CSS.props);
-                this.$store.commit('setActionsLock', false);
             }, this.transTime.intro * 1000);
         },
 
@@ -377,7 +377,6 @@ export default {
 
 
         cubeRotation(edge){
-            if(!edge) return;
             let edgeData = Object.assign([], this.cubes.orientations[edge]);
             let sequence = edgeData.shift();
             let newTransform = {};
@@ -420,6 +419,50 @@ export default {
         },
 
 
+        toChangeThemeViewpoint(viewpoint){
+            if(this.actionsLock) clearTimeout(this.transTime.ids.navi);
+            this.$store.commit('setActionsLock', true);
+
+            if(viewpoint){
+                const viewportCSSProps = {
+                    transform: { scale: [0.5, ''] },
+                    transition: ['all '+this.$store.state.changeThemeProcess.transitionTime+'s ease', '']
+                };
+                const wrapperCSSProps = Object.assign({}, this.wrapper.CSS.props, {
+                    transform: {
+                        perspective: [2000, 'px'],
+                        rotateX: [10 + (this.wrapper.CSS.props.transform.rotateX[0] > 180 ? 360 : 0), 'deg'],
+                        rotateY: [10 + (this.wrapper.CSS.props.transform.rotateY[0] > 180 ? 360 : 0), 'deg'],
+                        rotateZ: [0, 'deg'],
+                        translateX: [0, 'px'],
+                        translateY: [0, 'px'],
+                        translateZ: [0, 'px'],
+                    },
+                    transition: ['all '+this.$store.state.changeThemeProcess.transitionTime+'s ease', '']
+                });
+                this.viewport.CSS.text = this.CSSTextCompilator(viewportCSSProps);
+                this.wrapper.CSS.text = this.CSSTextCompilator(wrapperCSSProps);
+                this.transTime.ids.navi = setTimeout(() => {
+                    delete viewportCSSProps.transition;
+                    delete wrapperCSSProps.transition;
+                    this.viewport.CSS.text = this.CSSTextCompilator(viewportCSSProps);
+                    this.wrapper.CSS.text = this.CSSTextCompilator(wrapperCSSProps);
+                }, this.$store.state.changeThemeProcess.transitionTime * 1000);
+            }else{
+                this.viewport.CSS.props.transition = ['all '+this.$store.state.changeThemeProcess.transitionTime+'s ease', ''];
+                this.wrapper.CSS.props.transition = ['all '+this.$store.state.changeThemeProcess.transitionTime+'s ease', ''];
+                this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
+                this.wrapper.CSS.text = this.CSSTextCompilator(this.wrapper.CSS.props);
+                this.transTime.ids.navi = setTimeout(() => {
+                    this.$store.commit('setActionsLock', false);
+                    delete this.viewport.CSS.props.transition;
+                    delete this.wrapper.CSS.props.transition;
+                    this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
+                    this.wrapper.CSS.text = this.CSSTextCompilator(this.wrapper.CSS.props);
+                }, this.$store.state.changeThemeProcess.transitionTime * 1000);
+            }
+
+        }
     },
 
 
@@ -438,20 +481,19 @@ export default {
         },
         modalActive(){
             return this.$store.state.activeModal;
+        },
+        changeThemeViewpoint(){
+            return this.$store.state.changeThemeProcess.viewpoint;
         }
     },
 
 
     watch: {
         contentLoaded(){
-            // КУБЫ
             this.buildCubes();
             this.positioningCubes();
-            // ОБЕРТКА
             this.wrapperPreparation();
-            // VIEWPORT
             this.viewportPreparation();
-            // Intro
             this.intro();
         },
 
@@ -460,7 +502,7 @@ export default {
         },
 
         activeCubeSide(nVal){
-            this.cubeRotation(nVal);
+            if(nVal) this.cubeRotation(nVal);
         },
 
         fulcrum(){
@@ -469,6 +511,10 @@ export default {
 
         modalActive(){
             this.modalStateActivator();
+        },
+
+        changeThemeViewpoint(nVal){
+            this.toChangeThemeViewpoint(nVal);
         }
     },
 }
@@ -628,9 +674,6 @@ export default {
                     box-shadow: 0 0 45px #0005 inset, 0 0 15px #f00;
                 }
             }
-
-
-
         }
     }
 

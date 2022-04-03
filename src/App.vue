@@ -1,6 +1,6 @@
 <template>
-    <div id="cover" :class="[activeTheme, {modalactive: $store.state.activeModal}]">
-        <TopBar @change-class="changeThemeClass"></TopBar>
+    <div id="cover" :class="[$store.state.activeTheme, {modalactive: $store.state.activeModal}]">
+        <TopBar></TopBar>
         <SubMenu></SubMenu>
         <Viewport :contentLoaded="contentLoaded" ></Viewport>
         <Modal></Modal>
@@ -16,16 +16,11 @@ export default {
     components: { },
     data(){
         return {
-            activeTheme: 'mix',
             contentLoaded: false,
         }
     },
 
     methods: {
-        changeThemeClass(cls){
-            this.activeTheme = cls;
-        },
-
         // Загрузка контента.
         async getContentFromServer(){
             try {
@@ -39,8 +34,6 @@ export default {
                 console.warn(error);
             }
         },
-
-
     },
 
 
