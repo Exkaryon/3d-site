@@ -91,7 +91,7 @@ export default {
                 top: -40px;
                 text-align: center;
                 display: block;
-                font-weight: 200;
+                font-weight: normal;
                 font-size: 12px;
                 transform: scale(0.1) translateX(-100%);
                 opacity: 0;

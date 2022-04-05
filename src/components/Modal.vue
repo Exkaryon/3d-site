@@ -212,7 +212,7 @@ export default {
                 margin: 20px 0 0 0;
                 b {
                     display: block;
-                    font-weight: 500;
+                    font-weight: normal;
                 }
             }
         }
@@ -252,7 +252,7 @@ export default {
             margin:0 20px 0 0;
         }
         span {
-            font-weight: 500;
+            font-weight: normal;
         }
     }
     .notfound {

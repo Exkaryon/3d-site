@@ -120,220 +120,6 @@ body {
 }
 
 
-
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('assets/fonts/ProximaNovaT-Thin.eot');
-	src: local('Proxima Nova Thin'), local('ProximaNovaT-Thin'),
-		url('assets/fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/ProximaNovaT-Thin.woff') format('woff'),
-		url('assets/fonts/ProximaNovaT-Thin.ttf') format('truetype');
-	font-weight: 100;
-	font-style: normal;
-}
-
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('assets/fonts/ProximaNova-Light.eot');
-	src: local('Proxima Nova Light'), local('ProximaNova-Light'),
-		url('assets/fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/ProximaNova-Light.woff') format('woff'),
-		url('assets/fonts/ProximaNova-Light.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-}
-
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('assets/fonts/ProximaNova-Regular.eot');
-	src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
-		url('assets/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/ProximaNova-Regular.woff') format('woff'),
-		url('assets/fonts/ProximaNova-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-/* 
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('assets/fonts/ProximaNova-Semibold.eot');
-	src: local('Proxima Nova Semibold'), local('ProximaNova-Semibold'),
-		url('assets/fonts/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/ProximaNova-Semibold.woff') format('woff'),
-		url('assets/fonts/ProximaNova-Semibold.ttf') format('truetype');
-	font-weight: 600;
-	font-style: normal;
-}
-
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('assets/fonts/ProximaNova-Bold.eot');
-	src: local('Proxima Nova Bold'), local('ProximaNova-Bold'),
-		url('assets/fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/ProximaNova-Bold.woff') format('woff'),
-		url('assets/fonts/ProximaNova-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('assets/fonts/ProximaNova-Extrabld.eot');
-	src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
-		url('assets/fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/ProximaNova-Extrabld.woff') format('woff'),
-		url('assets/fonts/ProximaNova-Extrabld.ttf') format('truetype');
-	font-weight: 800;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url('assets/fonts/ProximaNova-Black.eot');
-	src: local('Proxima Nova Black'), local('ProximaNova-Black'),
-		url('assets/fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/ProximaNova-Black.woff') format('woff'),
-		url('assets/fonts/ProximaNova-Black.ttf') format('truetype');
-	font-weight: 900;
-	font-style: normal;
-}
-
-
-
-@font-face {
-	font-family: 'Bad Script';
-	src: url('assets/fonts/BadScript-Regular.eot');
-	src: local('Bad Script Regular'), local('BadScript-Regular'),
-		url('assets/fonts/BadScript-Regular.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/BadScript-Regular.woff') format('woff'),
-		url('assets/fonts/BadScript-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-
-
-
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-Thin.eot');
-    src: local('TT Lakes Thin'), local('TTLakes-Thin'),
-        url('assets/fonts/TTLakes-Thin.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-Thin.woff') format('woff'),
-        url('assets/fonts/TTLakes-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-ExtraLight.eot');
-    src: local('TT Lakes ExtraLight'), local('TTLakes-ExtraLight'),
-        url('assets/fonts/TTLakes-ExtraLight.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-ExtraLight.woff') format('woff'),
-        url('assets/fonts/TTLakes-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-Light.eot');
-    src: local('TT Lakes Light'), local('TTLakes-Light'),
-        url('assets/fonts/TTLakes-Light.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-Light.woff') format('woff'),
-        url('assets/fonts/TTLakes-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-Regular.eot');
-    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
-        url('assets/fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-Regular.woff') format('woff'),
-        url('assets/fonts/TTLakes-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-Medium.eot');
-    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
-        url('assets/fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-Medium.woff') format('woff'),
-        url('assets/fonts/TTLakes-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-Bold.eot');
-    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
-        url('assets/fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-Bold.woff') format('woff'),
-        url('assets/fonts/TTLakes-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-DemiBold.eot');
-    src: local('TT Lakes DemiBold'), local('TTLakes-DemiBold'),
-        url('assets/fonts/TTLakes-DemiBold.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-DemiBold.woff') format('woff'),
-        url('assets/fonts/TTLakes-DemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-ExtraBold.eot');
-    src: local('TT Lakes ExtraBold'), local('TTLakes-ExtraBold'),
-        url('assets/fonts/TTLakes-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-ExtraBold.woff') format('woff'),
-        url('assets/fonts/TTLakes-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'TT Lakes';
-    src: url('assets/fonts/TTLakes-Black.eot');
-    src: local('TT Lakes Black'), local('TTLakes-Black'),
-        url('assets/fonts/TTLakes-Black.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/TTLakes-Black.woff') format('woff'),
-        url('assets/fonts/TTLakes-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-
-
-
-@font-face {
-	font-family: 'Boxed';
-	src: url('assets/fonts/BoxedSemibold.eot');
-	src: local('Boxed Semibold'), local('BoxedSemibold'),
-		url('assets/fonts/BoxedSemibold.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/BoxedSemibold.woff') format('woff'),
-		url('assets/fonts/BoxedSemibold.ttf') format('truetype');
-	font-weight: 600;
-	font-style: normal;
-}
-
 @font-face {
 	font-family: 'Boxed';
 	src: url('assets/fonts/BoxedThin.eot');
@@ -342,51 +128,6 @@ body {
 		url('assets/fonts/BoxedThin.woff') format('woff'),
 		url('assets/fonts/BoxedThin.ttf') format('truetype');
 	font-weight: 100;
-	font-style: normal;
-}
-
-
-@font-face {
-	font-family: 'Boxed';
-	src: url('assets/fonts/BoxedLight.eot');
-	src: local('Boxed Light'), local('BoxedLight'),
-		url('assets/fonts/BoxedLight.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/BoxedLight.woff') format('woff'),
-		url('assets/fonts/BoxedLight.ttf') format('truetype');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Boxed';
-	src: url('assets/fonts/BoxedRegular-Bold.eot');
-	src: local('Boxed Regular Bold'), local('BoxedRegular-Bold'),
-		url('assets/fonts/BoxedRegular-Bold.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/BoxedRegular-Bold.woff') format('woff'),
-		url('assets/fonts/BoxedRegular-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Boxed';
-	src: url('assets/fonts/BoxedHeavy.eot');
-	src: local('Boxed Heavy'), local('BoxedHeavy'),
-		url('assets/fonts/BoxedHeavy.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/BoxedHeavy.woff') format('woff'),
-		url('assets/fonts/BoxedHeavy.ttf') format('truetype');
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Boxed';
-	src: url('assets/fonts/BoxedMedium.eot');
-	src: local('Boxed Medium'), local('BoxedMedium'),
-		url('assets/fonts/BoxedMedium.eot?#iefix') format('embedded-opentype'),
-		url('assets/fonts/BoxedMedium.woff') format('woff'),
-		url('assets/fonts/BoxedMedium.ttf') format('truetype');
-	font-weight: 500;
 	font-style: normal;
 }
 
@@ -408,10 +149,59 @@ body {
 		url('assets/fonts/BoxedRegular.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/BoxedRegular.woff') format('woff'),
 		url('assets/fonts/BoxedRegular.ttf') format('truetype');
-	font-weight: 500;
+	font-weight: normal;
 	font-style: normal;
 }
- */
+
+
+
+
+
+@font-face {
+	font-family: 'Bad Script';
+	src: url('assets/fonts/BadScript-Regular.eot');
+	src: local('Bad Script Regular'), local('BadScript-Regular'),
+		url('assets/fonts/BadScript-Regular.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/BadScript-Regular.woff') format('woff'),
+		url('assets/fonts/BadScript-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('assets/fonts/ProximaNovaT-Thin.eot');
+	src: local('Proxima Nova Thin'), local('ProximaNovaT-Thin'),
+		url('assets/fonts/ProximaNovaT-Thin.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/ProximaNovaT-Thin.woff') format('woff'),
+		url('assets/fonts/ProximaNovaT-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('assets/fonts/ProximaNova-Light.eot');
+	src: local('Proxima Nova Light'), local('ProximaNova-Light'),
+		url('assets/fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/ProximaNova-Light.woff') format('woff'),
+		url('assets/fonts/ProximaNova-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('assets/fonts/ProximaNova-Regular.eot');
+	src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+		url('assets/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/ProximaNova-Regular.woff') format('woff'),
+		url('assets/fonts/ProximaNova-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 
 

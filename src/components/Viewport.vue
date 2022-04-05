@@ -609,7 +609,6 @@ export default {
                     text-align: center;
                     padding: 0.8em 1.5em;
                     margin: 0;
-                    font-weight: 100;
                     border: none;
                     position: relative;
                     transform: translateZ(5px);
@@ -617,10 +616,10 @@ export default {
                     border-radius: 5px;
                     transition: all 0.5s ease;
                     cursor: pointer;
-                    letter-spacing: 0.1em;
-                    font-weight: 100;
-                    text-transform: uppercase;
                     font-size: 80%;
+                    font-weight: 100;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
                     outline: none;
                     &::before {
                         position: absolute;
