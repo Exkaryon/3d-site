@@ -17,6 +17,7 @@ export default createStore({
                 fragmentsAnimation: false,
                 transitionTime: 1.5
             },
+            activeManual: false,
             // Статичные данные
             content: {},
         }
@@ -27,11 +28,11 @@ export default createStore({
     },
 
     mutations: {
-        setActionsLock(state, value){
-            state.actionsLock = value;
+        setActionsLock(state, val){
+            state.actionsLock = val;
         },
-        setFulcrum(state, value){
-            state.fulcrum = value;
+        setFulcrum(state, val){
+            state.fulcrum = val;
         },
         setContent(state, content){
             state.content = content;
@@ -56,6 +57,9 @@ export default createStore({
         setActiveTheme(state, theme){
             state.activeTheme = theme;
         },
+        setActiveManual(state, val){
+            state.activeManual = val;
+        }
     },
 
     actions: {

@@ -5,8 +5,7 @@
 <script>
 export default {
     name: 'Fragments',
-
-
+    
     props: {
         contentLoaded: {
             type: Boolean,
@@ -20,13 +19,22 @@ export default {
         CSSTextCompilator: {
             type: Function
         },
+        actualPerformance: {
+            type: String
+        }
     },
 
 
     data(){
         return {
             fragments: {
-                totalElements: 200,             // Количество корректных фрагментов, которые попытается создать функция, но не более limiter.
+                totalElements: {                 // Количество корректных фрагментов, которые попытается создать функция, но не более limiter, для соответсвующего имени производительности.
+                    fast: 200,
+                    normal: 100,
+                    middle: 50,
+                    slow: 25,
+                    veryslow: 0
+                },             // Количество корректных фрагментов, которые попытается создать функция, но не более limiter.
                 limiter: 500,                   // Маскимальное кол-во итераций/попыток создания корректных фрагментов. Для предотвращения бесконечного зацикливания, когда введены некоректные значения, например, когда фрагменты все время попадают в зону отчуждения.  
                 dist: [0, 4500],                // Минимальный и максимальный пороги дистанции (разброс) размещения элементов от центра пространства в пикселях. Минимальный порог != 0 работает некорректно, образуя стены-пустоты по каждой из осей.  
                 breakaway: 100,                 // Дистанция (зона отчуждения) от граней кубов, в области которой не будут размещаться фрагменты, центры которых попадают в данную область. Следует учитывать, что данная величина не должна быть менее половины размера фрагментов.
@@ -84,13 +92,12 @@ export default {
                 });
             }
             this.fragments.limiter--;
-            if(fragments.length < this.fragments.totalElements && this.fragments.limiter > 0){
+            if(fragments.length < this.fragments.totalElements[this.actualPerformance] && this.fragments.limiter > 0){
                 this.fragmentsGenerator(fragments);
             }else{
                 this.fragments.elements = fragments;
             }
         },
-
     },
 
 
@@ -119,11 +126,11 @@ export default {
                 &::before {
                     background-size: contain!important;
                 }
-                &.maple {background: url(../../assets/maple.png) center center no-repeat;}
-                &.oak {background: url(../../assets/oak.png) center center no-repeat;}
-                &.chestnut {background: url(../../assets/chestnut.png) center center no-repeat;}
-                &.liquidambar {background: url(../../assets/liquidambar.png) center center no-repeat;}
-                &.linden {background: url(../../assets/linden.png) center center no-repeat;}
+                &.maple {background: url(../../assets/images/maple.png) center center no-repeat;}
+                &.oak {background: url(../../assets/images/oak.png) center center no-repeat;}
+                &.chestnut {background: url(../../assets/images/chestnut.png) center center no-repeat;}
+                &.liquidambar {background: url(../../assets/images/liquidambar.png) center center no-repeat;}
+                &.linden {background: url(../../assets/images/linden.png) center center no-repeat;}
             }
         }
     }

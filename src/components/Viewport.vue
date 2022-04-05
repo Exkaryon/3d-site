@@ -10,7 +10,13 @@
                 </article>
             </section>
 
-            <fragments :contentLoaded="contentLoaded" :viewportData="{win: win, cubes: {size: cubes.size, CSSprops: cubes.CSS.props.stack}}" :randomizer="randomizer" :CSSTextCompilator="CSSTextCompilator"></fragments>
+            <fragments
+                :contentLoaded="contentLoaded"
+                :actualPerformance="actualPerformance"
+                :viewportData="{win: win, cubes: {size: cubes.size, CSSprops: cubes.CSS.props.stack}}"
+                :randomizer="randomizer"
+                :CSSTextCompilator="CSSTextCompilator"
+            />
             
         </div>
     </div>
@@ -32,6 +38,9 @@ export default {
         contentLoaded: {
             type: Boolean,
         },
+        actualPerformance: {
+            type: String
+        }
     },
 
 
@@ -461,7 +470,6 @@ export default {
                     this.wrapper.CSS.text = this.CSSTextCompilator(this.wrapper.CSS.props);
                 }, this.$store.state.changeThemeProcess.transitionTime * 1000);
             }
-
         }
     },
 
@@ -643,39 +651,40 @@ export default {
 }
 
 
-/* THEMES */
-.mix {
-    #viewport{
-        .wrapper {
-            .cube {
-                > article {
-                    background: url(../assets/light_cube.jpg) center center no-repeat;
-                    background-size: cover;
-                    box-shadow: 0 0 45px #000 inset, 0 0 45px #f505;
-                    text-shadow: 0 0 5px #000;
-                    border: none;
-                    h2 {
-                        font-family: Boxed;
-                    }
-                     button {
-                        color: #fff;
-                        background: #035;
-                        border: solid 1px #0005;
-                        &::before {
-                            background: #000;
-                            box-shadow: 0 0 10px #000;
+/* THEMES IN PERFORMANCE VARS */
+.max {
+    &.mix {
+        #viewport{
+            .wrapper {
+                .cube {
+                    > article {
+                        background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                        background-size: cover;
+                        box-shadow: 0 0 45px #000 inset, 0 0 45px #f505;
+                        text-shadow: 0 0 5px #000;
+                        border: none;
+                        h2 {
+                            font-family: Boxed;
                         }
-                        &:hover {
-                            border: solid 1px #f009;
+                        button {
+                            color: #fff;
+                            background: #035;
+                            border: solid 1px #0005;
+                            &::before {
+                                background: #000;
+                                box-shadow: 0 0 10px #000;
+                            }
+                            &:hover {
+                                border: solid 1px #f009;
+                            }
                         }
                     }
-                }
-                &:hover > article {
-                    box-shadow: 0 0 45px #0005 inset, 0 0 15px #f00;
+                    &:hover > article {
+                        box-shadow: 0 0 45px #0005 inset, 0 0 15px #f00;
+                    }
                 }
             }
         }
     }
-
 }
 </style>

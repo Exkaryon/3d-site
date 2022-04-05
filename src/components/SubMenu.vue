@@ -132,43 +132,45 @@ export default {
 
 
 /* THEMES */
-.mix {
-    #submenu {
-        a {
-            text-shadow:
-                0 0 38px #059,
-                0 0 28px #059,
-                0 0 24px #059,
-                0 0 20px #059,
-                0 0 16px #059,
-                0 0 12px #059,
-                0 0 8px  #059,
-                0 0 4px  #059;
-            &:hover,
-            &.selected {
+.max {
+    &.mix {
+        #submenu {
+            a {
                 text-shadow:
-                    0 0 38px #f00a,
-                    0 0 28px #f00a,
-                    0 0 24px #f00a,
-                    0 0 20px #f00a,
-                    0 0 16px #f00a,
-                    0 0 12px #f00a,
-                    0 0 8px  #f00a,
-                    0 0 4px  #f00a;
+                    0 0 38px #059,
+                    0 0 28px #059,
+                    0 0 24px #059,
+                    0 0 20px #059,
+                    0 0 16px #059,
+                    0 0 12px #059,
+                    0 0 8px  #059,
+                    0 0 4px  #059;
+                &:hover,
+                &.selected {
+                    text-shadow:
+                        0 0 38px #f00a,
+                        0 0 28px #f00a,
+                        0 0 24px #f00a,
+                        0 0 20px #f00a,
+                        0 0 16px #f00a,
+                        0 0 12px #f00a,
+                        0 0 8px  #f00a,
+                        0 0 4px  #f00a;
+                }
             }
-        }
-        div {
-            &::after {
-                background:
-                    linear-gradient(90deg, #0590, #059, #0590),
-                    linear-gradient(90deg, #0590, #059, #0590),
-                    linear-gradient(90deg, #0590, #059, #0590);
-            }
-            a::after {
-                background: linear-gradient(90deg, #0590, #059, #0590);
+            div {
+                &::after {
+                    background:
+                        linear-gradient(90deg, #0590, #059, #0590),
+                        linear-gradient(90deg, #0590, #059, #0590),
+                        linear-gradient(90deg, #0590, #059, #0590);
+                }
+                a::after {
+                    background: linear-gradient(90deg, #0590, #059, #0590);
+                }
             }
         }
     }
-}
 
+}
 </style>

@@ -14,7 +14,9 @@
                 <div v-for="(theme, index) in themes" :key="index" v-bind:data-theme="theme.title.toLowerCase()" @click="themeSelection(index, $event.target)" :class="[theme.active ? 'selected' : '', index === transElemIndex ? 'trans' : '']"><span>{{theme.title}}</span></div>
             </div>
         </div>
-
+        <div class="manlink" @click="$store.commit('setActiveManual', true)"> 
+            <span>Справка</span>
+        </div>
     </div>
 </template>
 
@@ -134,10 +136,35 @@ export default {
             position: absolute;
             width: 50px;
             height: 50px;
-            background: url("../assets/crosshair.png") center center no-repeat;
+            background: url("../assets/images/crosshair.png") center center no-repeat;
             top: -8px;
             left:-9px;
         } 
+    }
+
+    .manlink {
+        margin-left: 230px;
+        border-bottom: dashed 1px #fff5;
+        position: relative;
+        color: #fff9;
+        cursor: pointer;
+        &::before {
+            content: '🛠';
+            position: absolute;
+            display: block;
+            text-align: center;
+            width: 15px;
+            height: 20px;
+            left: -27px;
+            top: -7px;
+            font-size: 22px;
+            opacity: 0.8;
+        }
+        &:hover {
+            color: #fff;
+            border-color: #fff9;
+        }
+        transition: color 0.5s ease;
     }
 
     .themes_switcher {
@@ -228,80 +255,83 @@ export default {
 }
 
 /* THEMES */
-.mix {
-    /* Nav & other links */
-    #topbar {
-        box-shadow:
-            0 0 140px #059d,
-            0 0 40px  #0595,
-            0 0 3px   #059 inset,
-            0 0 3px   #059 inset,
-            0 0 13px  #059 inset,
-            0 0 23px  #059 inset;
-        .fulcrum {
+.max{
+    &.mix {
+        /* Nav & other links */
+        #topbar {
             box-shadow:
-                0 0 90px #059,
-                0 0 50px #059,
-                0 0 20px #059,
-                0 0 20px #059 inset,
-                0 0 10px #0595 inset;
-                &:hover {
-                    box-shadow:
-                        0 0 90px #f00a,
-                        0 0 50px #f00a,
-                        0 0 20px #f00a,
-                        0 0 10px #f00 inset,
-                        0 0 20px #059 inset;
-                }
-        }
-        nav a {
-            text-shadow:
-                0 0 38px #059,
-                0 0 28px #059,
-                0 0 24px #059,
-                0 0 20px #059,
-                0 0 16px #059,
-                0 0 12px #059,
-                0 0 8px  #059,
-                0 0 4px  #059;
-            &:hover, &.selected {
-                text-shadow:
-                    0 0 38px #f00a,
-                    0 0 28px #f00a,
-                    0 0 24px #f00a,
-                    0 0 20px #f00a,
-                    0 0 16px #f00a,
-                    0 0 12px #f00a,
-                    0 0 8px  #f00a,
-                    0 0 4px  #f00a;
-            }
-            &::after {
-                background: linear-gradient(90deg, #0590, #059, #0590);
-            }
-        }
-
-        /* Switcher */
-        .themes_switcher div div {
-            &::after {
+                0 0 140px #059d,
+                0 0 40px  #0595,
+                0 0 3px   #059 inset,
+                0 0 3px   #059 inset,
+                0 0 13px  #059 inset,
+                0 0 23px  #059 inset;
+            .fulcrum {
                 box-shadow:
-                    0 0 20px #0599 inset,
-                    0 0 20px #0599;
-            }
-            span {
-                text-shadow: 0 0 10px #059;
-            }
-            &::after {
-                box-shadow:
+                    0 0 90px #059,
+                    0 0 50px #059,
+                    0 0 20px #059,
                     0 0 20px #059 inset,
-                    0 0 20px #059;
+                    0 0 10px #0595 inset;
+                    &:hover {
+                        box-shadow:
+                            0 0 90px #f00a,
+                            0 0 50px #f00a,
+                            0 0 20px #f00a,
+                            0 0 10px #f00 inset,
+                            0 0 20px #059 inset;
+                    }
             }
-            &:hover::after {
-                box-shadow:
-                    0 0 20px #f00 inset,
-                    0 0 20px #f00;
+            nav a {
+                text-shadow:
+                    0 0 38px #059,
+                    0 0 28px #059,
+                    0 0 24px #059,
+                    0 0 20px #059,
+                    0 0 16px #059,
+                    0 0 12px #059,
+                    0 0 8px  #059,
+                    0 0 4px  #059;
+                &:hover, &.selected {
+                    text-shadow:
+                        0 0 38px #f00a,
+                        0 0 28px #f00a,
+                        0 0 24px #f00a,
+                        0 0 20px #f00a,
+                        0 0 16px #f00a,
+                        0 0 12px #f00a,
+                        0 0 8px  #f00a,
+                        0 0 4px  #f00a;
+                }
+                &::after {
+                    background: linear-gradient(90deg, #0590, #059, #0590);
+                }
+            }
+
+            /* Switcher */
+            .themes_switcher div div {
+                &::after {
+                    box-shadow:
+                        0 0 20px #0599 inset,
+                        0 0 20px #0599;
+                }
+                span {
+                    text-shadow: 0 0 10px #059;
+                }
+                &::after {
+                    box-shadow:
+                        0 0 20px #059 inset,
+                        0 0 20px #059;
+                }
+                &:hover::after {
+                    box-shadow:
+                        0 0 20px #f00 inset,
+                        0 0 20px #f00;
+                }
             }
         }
     }
+
 }
 
 
