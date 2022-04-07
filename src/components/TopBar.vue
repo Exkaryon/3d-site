@@ -255,8 +255,8 @@ export default {
 
 }
 
-/* THEMES */
-.max{
+/* THEMES IN PERFORMANCE VARS */
+.max {
     &.mix {
         /* Nav & other links */
         #topbar {
@@ -572,6 +572,43 @@ export default {
 
 }
 
+.middle {
+    &.max {
+        #topbar nav a {
+            &::after {
+                background: linear-gradient(90deg, #0590, #059, #0590);
+            }
+        }
+    }
+
+    &.autumn {
+        #topbar nav a {
+            font-weight: 300;
+            &::after {
+                background: linear-gradient(90deg, #fc00, #fa0c, #fc00);
+            }
+        }
+    }
+
+    &.winter {
+        #topbar nav a {
+            &::after {
+                background: linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00);
+            }
+        }
+    }
+
+    &.spring-summer {
+        #topbar {
+            nav a {
+                font-weight: 300;
+                &::after {
+                    background: linear-gradient(90deg, #f000, #f90, #f000);
+                }
+            }
+        }
+    }
+}
 
 
 

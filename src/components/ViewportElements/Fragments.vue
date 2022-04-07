@@ -130,6 +130,7 @@ export default {
     }
 }
 
+/* THEMES */
 .mix, .autumn {
     #viewport{
         .wrapper {

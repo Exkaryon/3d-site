@@ -131,7 +131,7 @@ export default {
 }
 
 
-/* THEMES */
+/* THEMES IN PERFORMANCE VARS */
 .max {
     &.mix {
         #submenu {
@@ -275,6 +275,55 @@ export default {
                 }
                 a::after {
                     background: linear-gradient(90deg, #f000, #f909, #f000);
+                }
+            }
+        }
+    }
+
+}
+
+.middle {
+    &.mix {
+        #submenu {
+            div {
+                &::after {
+                    background:
+                        linear-gradient(90deg, #0590, #059, #0590),
+                        linear-gradient(90deg, #0590, #059, #0590),
+                        linear-gradient(90deg, #0590, #059, #0590);
+                }
+                a::after {
+                    background: linear-gradient(90deg, #0590, #059, #0590);
+                }
+            }
+        }
+    }
+
+    &.autimn,
+    &.spring-summer {
+        #submenu {
+            div {
+                &::after {
+                    background: linear-gradient(90deg, #fc00, #fa0c, #fc00);
+                }
+                a::after {
+                    background: linear-gradient(90deg, #f000, #f909, #f000);
+                }
+            }
+        }
+    }
+
+    &.winter {
+        #submenu {
+            div {
+                &::after {
+                    background:
+                        linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00),
+                        linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00),
+                        linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00);
+                }
+                a::after {
+                    background: linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00);
                 }
             }
         }

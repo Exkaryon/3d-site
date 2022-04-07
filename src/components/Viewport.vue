@@ -826,4 +826,108 @@ export default {
         }
     }
 }
+
+
+.middle {
+    &.mix {
+        #viewport {
+            .wrapper {
+                .cube > article {
+                    background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                    background-size: cover;
+                    border: none;
+                    button {
+                        color: #fff;
+                        background: #035;
+                        border: solid 1px #0005;
+                        &::before {
+                            background: #000;
+                        }
+                        &:hover {
+                            border: solid 1px #f009;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.autumn,
+    &.spring-summer {
+        #viewport {
+            .wrapper {
+                .cube > article {
+                    background: url(../assets/images/old_paper.jpg) center center no-repeat;
+                    background-size: cover;
+                    font-family: 'Bad Script';
+                    letter-spacing: 0.05em;
+                    white-space: normal;
+                    color: #322;
+                    text-shadow: 0 0 25px #fff;
+                    font-weight: bold;
+                    align-items: center;
+                    border: none;
+                    h2 {
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-shadow: 0 0 1px #000;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 140%;
+                        margin:10px 0 14px;
+                        letter-spacing: normal;
+                        font-weight: bold;
+                        white-space: normal;
+                    }
+                    button {
+                        color: #322;
+                        background: url(../assets/images/button.png) center center no-repeat;
+                        font-family: 'Bad Script';
+                        border: none;
+                        background-size: contain;
+                        line-height: 100%;
+                        font-weight: bold;
+                        text-transform: lowercase;
+                        font-size: 15px;
+                        border-radius: 0;
+                        &::before {
+                            background: #000c;
+                            box-shadow: 0 0 10px #000;
+                            border-radius: 0;
+                            filter: blur(5px);
+                        }
+                        &:hover::before  {
+                            filter: blur(10px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.winter {
+        #viewport {
+            .wrapper {
+                .cube > article {
+                    background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                    background-size: cover;
+                    border: none;
+                    button {
+                        color: #fff;
+                        background: none;
+                        border: solid 1px #fff7;
+                        &::before {
+                            background: #000;
+                            box-shadow: 0 0 10px #000;
+                            filter: blur(5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
 </style>

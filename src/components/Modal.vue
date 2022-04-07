@@ -265,10 +265,7 @@ export default {
 
 
 
-
-
-
-/* THEMES */
+/* THEMES IN PERFORMANCE VARS */
 .max {
     &.mix {
         #modal {
@@ -520,8 +517,53 @@ export default {
     }
 }
 
+.middle {
+    .mix {
+        #modal::before {
+            background:
+                linear-gradient(0deg, #0590, #059, #0590),
+                linear-gradient(0deg, #0590, #059, #0590),
+                linear-gradient(0deg, #0590, #059, #0590);
+        }
+    }
 
+    .autumn {
+        #modal {
+            &::before {
+                background:
+                    linear-gradient(0deg, #0590, #7a0c, #0590),
+                    linear-gradient(0deg, #0590, #f00, #0590),
+                    linear-gradient(0deg, #0590, #f00, #0590);
+            }
+            .close {
+                font-weight: 300;
+            }
+        }
+    }
 
+    .winter {
+        #modal::before {
+            background:
+                linear-gradient(0deg, #0590, #e6111c, #0590),
+                linear-gradient(0deg, #0590, #5000aa, #0590),
+                linear-gradient(0deg, #0590, #5000aa, #0590),
+                linear-gradient(0deg, #0590, #5000aa, #0590),
+                linear-gradient(0deg, #0590, #5000aa, #0590),
+                linear-gradient(0deg, #0590, #5000aa, #0590);
+        }
+    }
 
-
+    .spring-summer {
+        #modal {
+            &::before {
+                background:
+                    linear-gradient(0deg, #0590, #7a0c, #0590),
+                    linear-gradient(0deg, #0590, #f90, #0590);
+            }
+            .close {
+                font-weight: 300;
+            }
+        }
+    }
+}
 </style>
