@@ -172,5 +172,113 @@ export default {
         }
     }
 
+    &.autumn {
+        #submenu {
+            a {
+                text-shadow:
+                    0 0 38px #f90,
+                    0 0 24px #f90a,
+                    0 0 16px #f907,
+                    0 0 8px  #f90,
+                    0 0 4px  #f905;
+                font-weight: 300;
+                &:hover,
+                &.selected {
+                    text-shadow:
+                        0 0 38px #7a0,
+                        0 0 28px #7a0,
+                        0 0 24px #9d0,
+                        0 0 20px #7a0,
+                        0 0 16px #f40,
+                        0 0 12px #f30,
+                        0 0 8px  #f20,
+                        0 0 4px  #f10;
+                }
+            }
+            div {
+                &::after {
+                    background: linear-gradient(90deg, #fc00, #fa0c, #fc00);
+                }
+                a::after {
+                    background: linear-gradient(90deg, #f000, #f909, #f000);
+                }
+            }
+        }
+    }
+
+    &.winter {
+        #submenu {
+            a {
+                text-shadow:
+                    0 0 38px #5000aa,
+                    0 0 28px #5000aa,
+                    0 0 24px #5000aa,
+                    0 0 20px #5000aa,
+                    0 0 16px #5000aa,
+                    0 0 12px #5000aa,
+                    0 0 8px  #5000aa,
+                    0 0 4px  #5000aa;
+                &:hover,
+                &.selected {
+                    text-shadow:
+                        0 0 38px #e6111c,
+                        0 0 28px #e6111c,
+                        0 0 24px #e6111c,
+                        0 0 20px #e6111c,
+                        0 0 16px #e6111c,
+                        0 0 12px #e6111c,
+                        0 0 8px  #e6111c,
+                        0 0 4px  #e6111c;
+                }
+            }
+            div {
+                &::after {
+                    background:
+                        linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00),
+                        linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00),
+                        linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00);
+                }
+                a::after {
+                    background: linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00);
+                }
+            }
+        }
+    }
+
+    &.spring-summer {
+        #submenu {
+            a {
+                text-shadow:
+                    0 0 58px #7a0,
+                    0 0 38px #7a0,
+                    0 0 24px #0097be,
+                    0 0 16px #7a0,
+                    0 0 8px #7a0,
+                    0 0 1px #000;
+                font-weight: 300;
+                &:hover,
+                &.selected {
+                    text-shadow:
+                        0 0 38px #7a0,
+                        0 0 28px #7a0,
+                        0 0 24px #9d0,
+                        0 0 20px #7a0,
+                        0 0 16px #f40,
+                        0 0 12px #f30,
+                        0 0 8px  #f20,
+                        0 0 4px  #f10;
+                }
+            }
+            div {
+                &::after {
+                    background: linear-gradient(90deg, #fc00, #fa0c, #fc00);
+                }
+                a::after {
+                    background: linear-gradient(90deg, #f000, #f909, #f000);
+                }
+            }
+        }
+    }
+
 }
 </style>

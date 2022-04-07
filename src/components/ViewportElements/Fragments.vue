@@ -112,20 +112,28 @@ export default {
 
 
 <style lang="scss" scoped>
-.mix {
+
+#viewport {
+    .wrapper {
+        .fragments {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: all 1s ease;
+            background-size: contain!important;
+            &::after,
+            &::before {
+                background-size: contain!important;
+            }
+        }
+    }
+}
+
+.mix, .autumn {
     #viewport{
         .wrapper {
             .fragments {
-                width: 100px;
-                height: 100px;
-                position: absolute;
-                transform-style: preserve-3d;
-                transition: all 1s ease;
-                background-size: contain!important;
-                &::after,
-                &::before {
-                    background-size: contain!important;
-                }
                 &.maple {background: url(../../assets/images/maple.png) center center no-repeat;}
                 &.oak {background: url(../../assets/images/oak.png) center center no-repeat;}
                 &.chestnut {background: url(../../assets/images/chestnut.png) center center no-repeat;}
@@ -135,6 +143,69 @@ export default {
         }
     }
 }
+
+
+.winter {
+    #viewport{
+        .wrapper {
+            .fragments {
+                &.maple {background: url(../../assets/images/snowcristal_1.png) center center no-repeat;}
+                &.oak {background: url(../../assets/images/snowcristal_2.png) center center no-repeat;}
+                &.chestnut {background: url(../../assets/images/snowcristal_3.png) center center no-repeat;}
+                &.liquidambar {background: url(../../assets/images/snowcristal_4.png) center center no-repeat;}
+                &.linden {background: url(../../assets/images/snowcristal_5.png) center center no-repeat;}
+            }
+        }
+    }
+}
+
+
+.spring-summer {
+    #viewport{
+        .wrapper {
+            .fragments {
+                background: none;
+                &::before,
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top:0;
+                    bottom:0;
+                    left:0;
+                    right:0;
+                    transform: rotateY(45deg);
+                    transform-origin: left;
+                    transition: transform 0.5s ease;
+                }
+                &::after {transform: rotateY(-45deg);}
+                &.maple::before,
+                &.maple::after {background: url(../../assets/images/butterfly_1.png) left center no-repeat;}
+                &.oak::before,
+                &.oak::after {background: url(../../assets/images/butterfly_2.png) left center no-repeat;}
+                &.chestnut::before,
+                &.chestnut::after {background: url(../../assets/images/butterfly_3.png) left center no-repeat;}
+                &.liquidambar::before,
+                &.liquidambar::after {background: url(../../assets/images/butterfly_4.png) left center no-repeat;}
+                &.linden::before,
+                &.linden::after {background: url(../../assets/images/butterfly_5.png) left center no-repeat;}
+                &:nth-child(3n+1)::before{transform: rotateY(-25deg);}
+                &:nth-child(3n+1)::after{ transform: rotateY(25deg);} 
+                &:nth-child(3n+2)::before{transform: rotateY(-45deg);}
+                &:nth-child(3n+2)::after{ transform: rotateY(45deg);} 
+                &:nth-child(3n+3)::before{transform: rotateY(-85deg);}
+                &:nth-child(3n+3)::after{ transform: rotateY(85deg);} 
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 
 /* Change themes animation */
 .collapse_fragments {

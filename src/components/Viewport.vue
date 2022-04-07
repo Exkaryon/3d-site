@@ -5,7 +5,7 @@
             <section v-for="cube in $store.state.content" :key="cube.name" :class="['cube', cube.name]" :style="[cubes.CSS.text.common, cubes.CSS.text.stack[cube.name]]" @click="$store.dispatch('interactiveNavi', $event.target)">
                 <article v-for="(article, sideName) in cube.sides" :key="sideName" :class="sideName" :data-name="article.name" :style="cubes.sidesCSS[sideName]">
                     <h2>{{article.title}}</h2>
-                    {{article.description}}
+                    <p>{{article.description}}</p>
                     <button>Подробнее</button>
                 </article>
             </section>
@@ -569,7 +569,7 @@ export default {
                 flex-direction: column;
                 align-items: flex-end;
                 transform-style: preserve-3d;
-                overflow: hidden;
+                /* overflow: hidden; - создает проблему недосягаемости грани для курсора при определенных оборотах куба */
                 background: linear-gradient(0deg, #0c1118, #111b29);
                 border:solid 1px #f00;
                 h2 {
@@ -662,6 +662,9 @@ export default {
                         box-shadow: 0 0 45px #000 inset, 0 0 45px #f505;
                         text-shadow: 0 0 5px #000;
                         border: none;
+                        &:hover > article {
+                           box-shadow: 0 0 45px #0005 inset, 0 0 15px #f00;
+                        }
                         h2 {
                             font-family: Boxed;
                         }
@@ -678,8 +681,145 @@ export default {
                             }
                         }
                     }
-                    &:hover > article {
-                        box-shadow: 0 0 45px #0005 inset, 0 0 15px #f00;
+                }
+            }
+        }
+    }
+
+    &.autumn {
+        #viewport{
+            .wrapper {
+                .cube {
+                    > article {
+                        background: url(../assets/images/old_paper.jpg) center center no-repeat;
+                        background-size: cover;
+                        font-family: 'Bad Script';
+                        letter-spacing: 0.05em;
+                        white-space: normal;
+                        color: #322;
+                        text-shadow: 0 0 2em #fff;
+                        font-weight: bold;
+                        align-items: center;
+                        border: none;
+                        h2 {
+                            text-align: center;
+                            font-weight: bold;
+                            text-shadow: 0 0 1px #000;
+                        }
+                        p {
+                            font-weight: bold;
+                            margin: 1em 0;
+                        }
+                        button {
+                            color: #322;
+                            background: url(../assets/images/button.png) center center no-repeat;
+                            font-family: 'Bad Script';
+                            border: none;
+                            background-size: contain;
+                            line-height: 100%;
+                            font-weight: bold;
+                            text-transform: lowercase;
+                            font-size: 1.2em;
+                            border-radius: 0;
+                            &::before {
+                                background: #000c;
+                                box-shadow: 0 0 10px #000;
+                                border-radius: 0;
+                                filter: blur(5px);
+                            }
+                            &:hover::before {
+                                filter: blur(10px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.winter {
+        #viewport{
+            .wrapper {
+                .cube {
+                    > article {
+                        background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                        background-size: cover;
+                        box-shadow: 0 0 45px #000 inset, 0 0 45px #e6111c55;
+                        border: none;
+                        &:hover > article {
+                            box-shadow: 0 0 45px #0005 inset, 0 0 15px #5000aa;
+                            text-shadow: 0 0 5px #000;
+                        }
+                        h2 {
+                            font-family: Boxed;
+                        }
+                        button {
+                            color: #fff;
+                            background: none;
+                            border: solid 1px #fff7;
+                            box-shadow: 0 0 5px #5000aa, 0 0 12px #5000aa, 0 0 12px #5000aa inset, 0 0 5px #5000aa inset;
+
+                            &::before {
+                                background: #000;
+                                box-shadow: 0 0 10px #000;
+                                filter: blur(5px);
+                            }
+                            &:hover {
+                                box-shadow: 0 0 5px #e6111c, 0 0 12px #e6111c, 0 0 12px #e6111c inset, 0 0 5px #e6111c inset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.spring-summer {
+        #viewport{
+            .wrapper {
+                .cube {
+                    > article {
+                        background: url(../assets/images/old_paper.jpg) center center no-repeat;
+                        background-size: cover;
+                        font-family: 'Bad Script';
+                        letter-spacing: 0.05em;
+                        white-space: normal;
+                        color: #322;
+                        text-shadow: 0 0 2em #fff;
+                        font-weight: bold;
+                        align-items: center;
+                        border: none;
+                        h2 {
+                            text-align: center;
+                            font-weight: bold;
+                            text-shadow: 0 0 1px #000;
+                        }
+                        p {
+                            font-weight: bold;
+                            margin: 1em 0;
+                        }
+                        button {
+                            color: #322;
+                            background: url(../assets/images/button.png) center center no-repeat;
+                            font-family: 'Bad Script';
+                            border: none;
+                            background-size: contain;
+                            line-height: 100%;
+                            font-weight: bold;
+                            text-transform: lowercase;
+                            font-size: 1.2em;
+                            border-radius: 0;
+                            &::before {
+                                background: #000c;
+                                box-shadow: 0 0 10px #000;
+                                border-radius: 0;
+                                filter: blur(5px);
+                            }
+                            &:hover::before {
+                                filter: blur(10px);
+                            }
+                        }
                     }
                 }
             }

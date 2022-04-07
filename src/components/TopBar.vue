@@ -174,6 +174,7 @@ export default {
         & > div {
             margin-left: 25px;
             display: flex;
+            cursor: pointer;
             div {
                 position: absolute;
                 display: block;
@@ -318,7 +319,7 @@ export default {
                 span {
                     text-shadow: 0 0 10px #059;
                 }
-                &::after {
+                &.active::after {
                     box-shadow:
                         0 0 20px #059 inset,
                         0 0 20px #059;
@@ -327,6 +328,243 @@ export default {
                     box-shadow:
                         0 0 20px #f00 inset,
                         0 0 20px #f00;
+                }
+            }
+        }
+    }
+
+    &.autumn {
+        /* Nav & other links */
+        #topbar {
+            box-shadow:
+                0 0 120px #f907,
+                0 0 20px  #aa4d0055,
+                0 0 3px   #f90c inset,
+                0 0 3px   #f909 inset,
+                0 0 13px  #f909 inset,
+                0 0 23px  #f909 inset;
+            .fulcrum {
+                box-shadow:
+                    0 0 90px #f909,
+                    0 0 50px #f909,
+                    0 0 20px #f909,
+                    0 0 26px #f905 inset,
+                    0 0 10px #f909 inset;
+                    &:hover {
+                        box-shadow:
+                            0 0 90px #7a0,
+                            0 0 50px #7a0,
+                            0 0 20px #f70c,
+                            0 0 10px #f50 inset,
+                            0 0 30px #f805 inset;
+                    }
+            }
+            nav a {
+                text-shadow:
+                    0 0 38px #f90,
+                    0 0 24px #f90a,
+                    0 0 16px #f907,
+                    0 0 8px  #f90,
+                    0 0 4px  #f905;
+                font-weight: 300;
+                &:hover, &.selected {
+                    text-shadow:
+                        0 0 38px #7a0,
+                        0 0 28px #7a0,
+                        0 0 24px #9d0,
+                        0 0 20px #7a0,
+                        0 0 16px #f40,
+                        0 0 12px #f30,
+                        0 0 8px  #f20,
+                        0 0 4px  #f10;
+                }
+                &::after {
+                    background: linear-gradient(90deg, #fc00, #fa0c, #fc00);
+                }
+            }
+
+            /* Switcher */
+            .themes_switcher div div {
+                &::after {
+                    box-shadow:
+                        0 0 20px #f505 inset,
+                        0 0 20px #f905
+                }
+                span {
+                    text-shadow: 0 0 10px #7a0;
+                }
+                &.active::after {
+                    box-shadow:
+                        0 0 20px #f905 inset,
+                        0 0 20px #f905;
+                }
+                &:hover::after {
+                    box-shadow:
+                        0 0 20px #f00 inset,
+                        0 0 20px #f00;
+                }
+            }
+        }
+    }
+
+    &.winter {
+        /* Nav & other links */
+        #topbar {
+            box-shadow:
+                0 0 140px #5000aa,
+                0 0 40px  #5000aa,
+                0 0 3px   #5000aa inset,
+                0 0 3px   #5000aa inset,
+                0 0 13px  #5000aa inset,
+                0 0 23px  #5000aa inset;
+            .fulcrum {
+                box-shadow:
+                    0 0 90px #5000aa,
+                    0 0 50px #5000aa,
+                    0 0 20px #5000aa,
+                    0 0 20px #5000aa inset,
+                    0 0 10px #5000aa inset;
+                    &:hover {
+                        box-shadow:
+                            0 0 90px #e6111c,
+                            0 0 50px #e6111c,
+                            0 0 20px #e6111c,
+                            0 0 10px #e6111c inset,
+                            0 0 20px #5000aa inset;
+                    }
+            }
+            nav a {
+                text-shadow:
+                    0 0 38px #5000aa,
+                    0 0 28px #5000aa,
+                    0 0 24px #5000aa,
+                    0 0 20px #5000aa,
+                    0 0 16px #5000aa,
+                    0 0 12px #5000aa,
+                    0 0 8px  #5000aa,
+                    0 0 4px  #5000aa;
+                &:hover, &.selected {
+                    text-shadow:
+                        0 0 38px #e6111c,
+                        0 0 28px #e6111c,
+                        0 0 24px #e6111c,
+                        0 0 20px #e6111c,
+                        0 0 16px #e6111c,
+                        0 0 12px #e6111c,
+                        0 0 8px  #e6111c,
+                        0 0 4px  #e6111c;
+                }
+                &::after {
+                    background: linear-gradient(90deg, #5000aa00, #5000aa, #5000aa00);
+                }
+            }
+
+            /* Switcher */
+            .themes_switcher div div {
+                &::after {
+                    box-shadow:
+                        0 0 20px #5000aa inset,
+                        0 0 20px #5000aa;
+                }
+                span {
+                    text-shadow: 0 0 10px #5000aa;
+                }
+                &.active::after {
+                    box-shadow:
+                        0 0 20px #5000aa inset,
+                        0 0 20px #5000aa;
+                }
+                &:hover::after {
+                    box-shadow:
+                        0 0 20px #e6111c inset,
+                        0 0 20px #e6111c;
+                }
+            }
+        }
+    }
+
+    &.spring-summer {
+        /* Nav & other links */
+        #topbar {
+            box-shadow:
+                 0 0 220px #7a09,
+                 0 0 50px  #ff550055,
+                 0 0 13px  #7a09 inset,
+                 0 0 3px   #f00 inset,
+                 0 0 13px  #7a09 inset,
+                 0 0 23px  #7a09 inset;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left:25%;
+                right:25%;
+                bottom:0; 
+                border-radius: 50%;
+                box-shadow: 0 0 250px #7a02, 0 0 90px #7a04, 0 0 40px #0097be44;
+            }
+            .fulcrum {
+                box-shadow:
+                    0 0 90px #f909,
+                    0 0 50px #f909,
+                    0 0 20px #f909,
+                    0 0 26px #f905 inset,
+                    0 0 10px #f909 inset;
+                    &:hover {
+                        box-shadow:
+                            0 0 90px #7a0,
+                            0 0 50px #7a0,
+                            0 0 20px #f70c,
+                            0 0 10px #f50 inset,
+                            0 0 30px #f805 inset;
+                    }
+            }
+            nav a {
+                text-shadow:
+                    0 0 58px #7a0,
+                    0 0 38px #7a0,
+                    0 0 24px #0097be,
+                    0 0 16px #7a0,
+                    0 0 8px #7a0,
+                    0 0 1px #000;
+                font-weight: 300;
+                &:hover, &.selected {
+                    text-shadow:
+                        0 0 38px #7a0,
+                        0 0 28px #7a0,
+                        0 0 24px #9d0,
+                        0 0 20px #7a0,
+                        0 0 16px #f40,
+                        0 0 12px #f30,
+                        0 0 8px  #f20,
+                        0 0 4px  #f10;
+                }
+                &::after {
+                    background: linear-gradient(90deg, #f000, #f90, #f000);
+                }
+            }
+
+            /* Switcher */
+            .themes_switcher div div {
+                &::after {
+                    box-shadow:
+                        0 0 20px #7a05 inset,
+                        0 0 20px #fc04
+                }
+                span {
+                    text-shadow: 0 0 10px #7a0;
+                }
+
+                &.active::after {
+                    box-shadow:
+                        0 0 20px #0097be55 inset,
+                        0 0 20px #ff07;
+                }
+                &:hover::after {
+                    box-shadow:
+                        0 0 20px #0097be99 inset,
+                        0 0 20px #f90;
                 }
             }
         }

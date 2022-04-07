@@ -154,7 +154,7 @@ export default {
         padding-left:25px;
         cursor: pointer;
         font-size: 20px;
-        font-family: 'Boxed';
+        font-family: Boxed;
         &::before,
         &::after {
             content:'';
@@ -212,7 +212,7 @@ export default {
                 margin: 20px 0 0 0;
                 b {
                     display: block;
-                    font-weight: normal;
+                    font-weight: 500;
                 }
             }
         }
@@ -252,7 +252,7 @@ export default {
             margin:0 20px 0 0;
         }
         span {
-            font-weight: normal;
+            font-weight: 500;
         }
     }
     .notfound {
@@ -283,6 +283,15 @@ export default {
                     0 0 3px #059;
             }
             .close {
+                text-shadow:
+                    0 0 38px #059,
+                    0 0 28px #059,
+                    0 0 24px #059,
+                    0 0 20px #059,
+                    0 0 16px #059,
+                    0 0 12px #059,
+                    0 0 8px  #059,
+                    0 0 4px  #059;
                 &::before,
                 &::after {
                     box-shadow:
@@ -304,17 +313,17 @@ export default {
                         0 0 12px #f00a,
                         0 0 8px  #f00a,
                         0 0 4px  #f00a;
-                        &::before,
-                        &::after {
-                            box-shadow:
-                                0 0 15px #f00, 
-                                0 0 10px #f00, 
-                                0 0 5px  #f00, 
-                                0 0 4px  #f00, 
-                                0 0 3px  #f00, 
-                                0 0 2px  #f00, 
-                                0 0 1px  #f00;
-                        }
+                    &::before,
+                    &::after {
+                        box-shadow:
+                            0 0 15px #f00, 
+                            0 0 10px #f00, 
+                            0 0 5px  #f00, 
+                            0 0 4px  #f00, 
+                            0 0 3px  #f00, 
+                            0 0 2px  #f00, 
+                            0 0 1px  #f00;
+                    }
                 }
             }
             &::before {
@@ -324,7 +333,190 @@ export default {
                     linear-gradient(0deg, #0590, #059, #0590);
             }
         }
+    }
 
+    &.winter {
+        #modal {
+            color: #d1beff;
+            h2 {
+                text-shadow:
+                    0 0 30px #5000aa,
+                    0 0 25px #5000aa,
+                    0 0 15px #5000aa,
+                    0 0 10px #5000aa,
+                    0 0 5px #5000aa,
+                    0 0 3px #5000aa;
+            }
+            .close {
+                text-shadow:
+                    0 0 38px #5000aa,
+                    0 0 28px #5000aa,
+                    0 0 24px #5000aa,
+                    0 0 20px #5000aa,
+                    0 0 16px #5000aa,
+                    0 0 12px #5000aa,
+                    0 0 8px  #5000aa,
+                    0 0 4px  #5000aa;
+                &::before,
+                &::after {
+                    box-shadow:
+                        0 0 15px #5000aa,
+                        0 0 10px #5000aa, 
+                        0 0 5px  #5000aa, 
+                        0 0 4px  #5000aa, 
+                        0 0 3px  #5000aa, 
+                        0 0 2px  #5000aa, 
+                        0 0 1px  #5000aa;
+                }
+                &:hover {
+                    text-shadow:
+                        0 0 38px #e6111c,
+                        0 0 28px #e6111c,
+                        0 0 24px #e6111c,
+                        0 0 20px #e6111c,
+                        0 0 16px #e6111c,
+                        0 0 12px #e6111c,
+                        0 0 8px  #e6111c,
+                        0 0 4px  #e6111c;
+                    &::before,
+                    &::after {
+                        box-shadow:
+                            0 0 15px #e6111c, 
+                            0 0 10px #e6111c, 
+                            0 0 5px  #e6111c, 
+                            0 0 4px  #e6111c, 
+                            0 0 3px  #e6111c, 
+                            0 0 2px  #e6111c, 
+                            0 0 1px  #e6111c;
+                    }
+                }
+            }
+            &::before {
+                background:
+                    linear-gradient(0deg, #5000aa00, #5000aa, #5000aa00),
+                    linear-gradient(0deg, #5000aa00, #5000aa, #5000aa00),
+                    linear-gradient(0deg, #5000aa00, #5000aa, #5000aa00);
+            }
+        }
+    }
+
+    &.autumn {
+        #modal {
+            color: #fff2df;
+            h2 {
+                text-shadow:
+                    0 0 38px #f90,
+                    0 0 16px #f907,
+                    0 0 8px #f907,
+                    0 0 4px #f905;
+            }
+            .close {
+                text-shadow:
+                    0 0 38px #f90,
+                    0 0 24px #f90a,
+                    0 0 16px #f907,
+                    0 0 8px  #f90,
+                    0 0 4px  #f905;
+                font-weight: 300;
+                &::before,
+                &::after {
+                    box-shadow:
+                        0 0 20px #ff9900,
+                        0 0 10px #ff9900,
+                        0 0 5px  #ff9900cc,
+                        0 0 2px  #ff9900cc;
+                }
+                &:hover {
+                    text-shadow:
+                        0 0 38px #7a0,
+                        0 0 28px #7a0,
+                        0 0 24px #9d0,
+                        0 0 20px #7a0,
+                        0 0 16px #f40,
+                        0 0 12px #f30,
+                        0 0 8px  #f20,
+                        0 0 4px  #f10;
+                    &::before,
+                    &::after {
+                        box-shadow:
+                            0 0 25px #7a0,
+                            0 0 20px #7a0,
+                            0 0 14px #7a09,
+                            0 0 7px  #f90c,
+                            0 0 5px  #f909,
+                            0 0 3px  #f70,
+                            0 0 2px  #f50,
+                            0 0 1px  #f50;
+                    }
+                }
+            }
+            &::before {
+                background:
+                    linear-gradient(0deg, #0590, #7a0c, #0590),
+                    linear-gradient(0deg, #0590, #f00, #0590),
+                    linear-gradient(0deg, #0590, #f00, #0590);
+            }
+        }
+    }
+
+    &.spring-summer {
+        #modal {
+            color: #f2ffd5;
+            h2 {
+                text-shadow:
+                    0 0 36px #7a03,
+                    0 0 25px #0097be,
+                    0 0 20px #7a09,
+                    0 0 10px #7a0,
+                    0 0 1px #000;
+            }
+            .close {
+                text-shadow:
+                    0 0 58px #7a0,
+                    0 0 38px #7a0,
+                    0 0 24px #0097be,
+                    0 0 16px #7a0,
+                    0 0 8px #7a0,
+                    0 0 1px #000;
+                font-weight: 300;
+                &::before,
+                &::after {
+                    box-shadow:
+                        0 0 20px #ff9900,
+                        0 0 10px #ff9900,
+                        0 0 5px  #ff9900cc,
+                        0 0 2px  #ff9900cc;
+                }
+                &:hover {
+                    text-shadow:
+                        0 0 38px #7a0,
+                        0 0 28px #7a0,
+                        0 0 24px #9d0,
+                        0 0 20px #7a0,
+                        0 0 16px #f40,
+                        0 0 12px #f30,
+                        0 0 8px  #f20,
+                        0 0 4px  #f10;
+                    &::before,
+                    &::after {
+                        box-shadow:
+                            0 0 25px #7a0,
+                            0 0 20px #7a0,
+                            0 0 14px #7a09,
+                            0 0 7px  #f90c,
+                            0 0 5px  #f909,
+                            0 0 3px  #f70,
+                            0 0 2px  #f50,
+                            0 0 1px  #f50;
+                    }
+                }
+            }
+            &::before {
+                background:
+                    linear-gradient(0deg, #0590, #7a0c, #0590),
+                    linear-gradient(0deg, #0590, #f90, #0590);
+            }
+        }
     }
 }
 

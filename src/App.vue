@@ -120,6 +120,7 @@ body {
 }
 
 
+
 @font-face {
 	font-family: 'Boxed';
 	src: url('assets/fonts/BoxedThin.eot');
@@ -149,12 +150,21 @@ body {
 		url('assets/fonts/BoxedRegular.eot?#iefix') format('embedded-opentype'),
 		url('assets/fonts/BoxedRegular.woff') format('woff'),
 		url('assets/fonts/BoxedRegular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 500;
+	font-style: 500;
 }
 
 
-
+@font-face {
+	font-family: 'Boxed';
+	src: url('assets/fonts/BoxedRegular-Bold.eot');
+	src: local('Boxed Regular Bold'), local('BoxedRegular-Bold'),
+		url('assets/fonts/BoxedRegular-Bold.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/BoxedRegular-Bold.woff') format('woff'),
+		url('assets/fonts/BoxedRegular-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 
 
 @font-face {
