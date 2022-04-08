@@ -269,4 +269,154 @@ export default {
     30% {transform: scale(1.2);}
 }
 
+
+/* RESPONSIVE */
+@media (max-width:1279px){
+    #manual_info {
+        h3 {
+            margin-top: 20px;
+        }
+        .control {
+            width: 55%;
+        }
+        .performance {
+            width: calc(45% - 5vw);
+            &__detail .note {
+                flex-direction: column;
+                div {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    b {
+                        margin-bottom: 0;
+                    }
+                    small {
+                        margin-bottom: 12px;
+                        margin-left: 5px;
+                        display: inline;
+                    }
+                }
+            }
+            
+        }
+        .accept {
+            padding-top:20px;
+        }
+    }
+}
+
+
+@media (max-width:1024px) and (min-height:768px){
+    #manual_info {
+        .control,
+        .performance {
+            width: 100%;
+        }
+        .performance {
+            margin-left: 0;
+        }
+    }
+}
+
+
+@media (max-width:767px){
+    #manual_info {
+        left:10px;
+        right:10px;
+        top:10px;
+        bottom:10px;
+        font-size: 14px;
+        position: absolute;
+        overflow: auto;
+        h2 {
+            font-size: 28px;
+            margin:0;
+        }
+        h3 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        .accept {
+            padding-top:20px;
+        }
+        .control,
+        .performance {
+            width: 100%;
+        }
+        .performance {
+            margin-left: 0;
+            p span {
+                margin-top: 10px;
+            }
+            &__detail .note {
+                flex-direction: row;
+                div {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    b {
+                        margin-bottom: 0;
+                    }
+                    small {
+                        font-size: 10px;
+                        display: block;
+                        line-height: 12px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .close {
+            right: 15px;
+            top: 15px;
+        }
+    }
+}
+
+
+@media (max-width:376px){
+    #manual_info {
+        h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        p {
+            margin:10px 0 0;
+            letter-spacing: 0;
+        }
+        .accept {
+            padding-top:10px;
+        }
+    }
+}
+
+@media (max-width:359px){
+    #manual_info {
+        p {
+            margin:5px 0 0;
+        }
+        .performance {
+            &__detail {
+                margin-top: 15px;
+                .note div {
+                    span {
+                        font-size: 13px;
+                        white-space: nowrap;
+                    }
+                    b {
+                        font-size: 14px;
+                    }
+                    small {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .accept button {
+            font-size: 14px;
+            padding: 7px 15px;
+        }
+    }
+
+}
+
 </style>

@@ -18,7 +18,7 @@ export default {
                         moveType = 'rotate';
                     }],
             press:  ['touchstart', 'mousedown', (ev) => {
-                        ev.preventDefault();        // Отмена выделения элементов, когда водим мышью с зажатой кнопкой.
+                        if(ev.type == "mousedown") ev.preventDefault();        // Отмена выделения элементов, когда водим мышью с зажатой кнопкой.
                         if(inst.actionsLock || ev.target.closest('#modal')) return; 
                         moveStatus = true;
                     }],

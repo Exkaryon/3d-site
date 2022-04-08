@@ -264,6 +264,54 @@ export default {
 }
 
 
+/* RESPONSIVE */
+@media (max-width:1279px){
+    #modal {
+        .container {
+            padding: 60px 20px 20px 20px;
+        }
+        .gallery > div {
+            width: calc(50% - 10px);
+        }
+    }
+}
+
+@media (max-width:999px){
+    #modal {
+        width: 100%;
+    }
+}
+
+@media (max-width:767px){
+    #modal h2 span {
+        margin-left: 0;
+        border-left: none;
+        padding-left: 0;
+        font-weight: 100;
+        white-space: nowrap;
+        display: block;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:540px){
+    #modal .gallery > div {
+        width: 100%;
+    }
+}
+
+@media (max-width:359px){
+    #modal {
+        .close {
+            bottom: 120px;
+        }
+        .container {
+            height: calc(100% - 160px);
+        }
+    }
+
+}
+
 
 /* THEMES IN PERFORMANCE VARS */
 .max {

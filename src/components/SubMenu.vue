@@ -131,6 +131,28 @@ export default {
 }
 
 
+/* RESPONSIVE */
+@media (max-width:767px){
+    #submenu div a {
+        margin: 0 15px 15px;
+        font-size: 14px;
+        sup {
+            display: none;
+        }
+    }
+}
+
+@media (max-width:359px){
+    #submenu div {
+        padding: 15px 0 5px;
+        a {
+            margin: 0 15px 10px;
+            font-size: 14px;
+        }
+    }
+}
+
+
 /* THEMES IN PERFORMANCE VARS */
 .max {
     &.mix {

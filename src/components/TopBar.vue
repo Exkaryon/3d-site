@@ -248,11 +248,166 @@ export default {
                 transform: rotate(0deg)!important;
             }
         }
-
     }
+}
 
 
+/* RESPONSIVE */
+@media (max-width:999px){
+    #topbar {
+        justify-content: space-between;
+        z-index: 11;
+        nav a {
+            margin: 0 0 0 20px;
+            font-size: 16px;
+        }
+        .fulcrum {
+            width: 28px;
+            height: 28px;
+            margin:0 20px;
+            &::before{
+                width: 41px;
+                height: 41px;
+                background-size: contain;
+                top: -7px;
+                left:-7px;
+            }
+        }
+        .themes_switcher {
+            padding-right: 180px;
+        }
+        .manlink {
+            margin-right: 20px;
+            margin-left: 0;
+        }
+    }
+}
 
+@media (max-width:767px){
+    #topbar {
+        min-height: 55px;
+        nav {
+            margin-left: 20px;
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 24px;
+                width: 38px;
+                border-top: solid 2px #fff;
+                border-bottom: solid 2px #fff;
+                left:0;
+                top:5px;
+                transition: all 0.5s ease;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 2px;
+                background: #fff;
+                width: 38px;
+                left:0;
+                top:18px;
+                transition: all 0.5s ease;
+            }
+            div {
+                position: fixed;
+                left: -250px;
+                top: 67px;
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                padding: 10px 20px;
+                border: solid 1px #0599;
+                background: linear-gradient(45deg, #000, #000A);
+                border-radius: 0 15px 15px 15px;
+                text-align: center;
+                transition: left 0.5s ease;
+                a {
+                    white-space: nowrap;
+                    margin: 7px 0;
+                }
+            }
+            &.show {
+                &::before {
+                    height: 0px;
+                    width: 38px;
+                    border-top-width:1px;
+                    border-bottom-width:1px;
+                    transform: rotate(45deg);
+                    top: 17px;
+                }
+                &::after {
+                    transform: rotate(-405deg);
+                }
+                div {
+                    left: 20px;
+                }
+            }
+        }
+        .fulcrum {
+            margin-left: calc(100% - 430px);
+        }
+        .themes_switcher {
+            padding-right: 210px;
+            & > div {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:540px){
+    #topbar {
+        .fulcrum {
+           margin-right: 0;
+           margin-left: calc(100% - 310px);
+        }
+        .themes_switcher {
+            padding-right: 145px;
+            & > div {
+                &:first-child {
+                    font-size: 14px;
+                }
+                div {
+                    min-width: 136px;
+                    white-space: nowrap;
+                    transform-origin: 120px center 0;
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .manlink {
+            border: none;
+            &::before {
+                position: static;
+                display: block;
+                left: 0px;
+                top: 0px;
+                line-height: 20px;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width:359px){
+    #topbar {
+        .themes_switcher > div:first-child {
+            display: none; 
+        }
+        .fulcrum {
+           margin-left: 50px;
+        }
+        .themes_switcher {
+            padding-right: 130px;
+        }
+    }
 }
 
 /* THEMES IN PERFORMANCE VARS */
