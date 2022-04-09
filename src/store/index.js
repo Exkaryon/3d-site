@@ -66,21 +66,24 @@ export default createStore({
         interactiveNavi({state, commit}, elem){
             const cubeName = elem.closest('section').classList[1];
             const cubeSide = elem.closest('article');
+            console.log(elem)
             switch(elem.tagName.toLowerCase()){
                 case 'button':
                     commit('setSelectedCube', cubeName);
                     commit('setActiveCubeSide', cubeSide.classList[0]);
-
                     if(!state.actionsLock){
                         commit('setActiveModal', true);
                     }
                     break;
                 case 'article':
+                case 'div':
+                case 'h2':
+                case 'p':
                     if(state.selectedCube != cubeName){
                         commit('setSelectedCube', cubeName);
                         commit('setActiveCubeSide', null);
                     }else{
-                        if(state.activeCubeSide == cubeSide.classList[0]){
+                        if(state.activeCubeSide == cubeSide.classList[0] && cubeSide.dataset.name){
                             commit('setActiveModal', true);
                         }
                         commit('setActiveCubeSide', cubeSide.classList[0]);
@@ -101,6 +104,7 @@ export default createStore({
                         commit('setActiveCubeSide', null);
                         setTimeout(() => {  // Задержка для того, чтобы в компоненте было отслежено изменение состояния selectedCube. 
                             commit('setSelectedCube', elemName);
+                            link.closest('nav').classList.remove('show');
                         }, 50);
                     break;
                 case 'submenu':
@@ -114,7 +118,6 @@ export default createStore({
                     break;
             }
         },
-
 
         async changeTheme({state, commit}, themeName){
             if(state.changeThemeProcess.status) return;

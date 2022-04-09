@@ -4,9 +4,9 @@
 
             <section v-for="cube in $store.state.content" :key="cube.name" :class="['cube', cube.name]" :style="[cubes.CSS.text.common, cubes.CSS.text.stack[cube.name]]" @click="$store.dispatch('interactiveNavi', $event.target)">
                 <article v-for="(article, sideName) in cube.sides" :key="sideName" :class="sideName" :data-name="article.name" :style="cubes.sidesCSS[sideName]">
-                    <h2>{{article.title}}</h2>
-                    <p>{{article.description}}</p>
-                    <button>Подробнее</button>
+                    <h2 v-show="article.title">{{article.title}}</h2>
+                    <div v-html="article.description"></div>
+                    <button v-show="article.title">Подробнее</button>
                 </article>
             </section>
 
@@ -531,7 +531,7 @@ export default {
 
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .modalactive #viewport {
     left:-25%;
 }

@@ -1,10 +1,8 @@
 <template>
     <div id="modal">
     <div class="container" :class="{show: visibleContent}">
-        <h2>{{ article.title }}</h2>
-        <div>
-            {{ article.fulltext }}
-        </div>
+        <h2>{{ article.title}}</h2>
+        <div v-html="article.fulltext"></div>
     </div>
     <div class="shadow">&nbsp;</div>
     <div class="close" @click="$store.commit('setActiveModal', false)">Закрыть</div>
@@ -34,7 +32,7 @@ export default {
                 this.article = article;
                 this.visibleContent = true;
             } , 500);
-        }
+        },
     },
 
 
@@ -49,6 +47,7 @@ export default {
             return this.$store.state.activeModal;
         }
     },
+
 
     watch: {
         currentCube(){
@@ -67,7 +66,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+
+<style lang="scss">
 .modalactive #modal {
     transform: translateX(0);
 }
@@ -171,6 +171,7 @@ export default {
             transform: rotate(-45deg);
         }
     }
+
     .gallery {
         display: flex;
         flex-wrap: wrap;

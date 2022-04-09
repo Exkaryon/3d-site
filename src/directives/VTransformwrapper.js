@@ -69,7 +69,7 @@ export default {
                         inst.wrapper.CSS.text = inst.CSSTextCompilator(inst.wrapper.CSS.props);
                     }],
             scroll:  ['', 'wheel', (ev) => {
-                        if(inst.actionsLock || ev.target.closest('.modal')) return;
+                        if(inst.actionsLock || ev.target.closest('#modal')) return;
                         inst.viewport.CSS.props.transform.scale[0] -= inst.viewport.CSS.props.transform.scale[0] > 1
                             ? ev.deltaY / 1000 * Math.sqrt(inst.viewport.CSS.props.transform.scale[0])
                             : ev.deltaY / 1000 * Math.pow(inst.viewport.CSS.props.transform.scale[0], 2);

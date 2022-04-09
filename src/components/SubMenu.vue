@@ -1,7 +1,7 @@
 <template>
     <div id="submenu" ref="smHeap">
         <div v-for="menu in $store.state.content" :key="menu.name" :data-section="menu.name" :class="{ show: $store.state.currentCubeMenu == menu.name }">
-            <a v-for="(side, index) in menu.sides" :key="index" :href="'#'+index" :data-name="side.name" @click.prevent="$store.dispatch('linkNavi', $event.target)">{{side.title}}</a>
+            <a v-for="(side, index) in menu.sides" :key="index" :href="'#'+index" :data-name="side.name" v-show="side.name" @click.prevent="$store.dispatch('linkNavi', $event.target)">{{side.title}}</a>
         </div>
     </div>
 </template>
@@ -37,7 +37,7 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 #submenu {
     font-family: Boxed;
     position: fixed;

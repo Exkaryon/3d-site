@@ -1,6 +1,6 @@
 <template>
     <div id="topbar">
-        <nav>
+        <nav @click="$event.target.classList.toggle('show')">
             <div>
                 <a v-for="link in $store.state.content" :key="link.name" v-bind:href="'#'+link.name" @click.prevent="$store.dispatch('linkNavi', $event.target)">{{link.title}}</a>
             </div>
@@ -67,7 +67,7 @@ export default {
 
 
 
-<style scoped lang="scss">
+<style lang="scss">
 #topbar {
     font-family: Boxed;
     position: fixed;

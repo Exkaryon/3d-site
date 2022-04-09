@@ -16,6 +16,8 @@ import ManualInfo from './components/ManualInfo.vue';
 export default {
     name: 'App',
     components: {ManualInfo },
+
+
     data(){
         return {
             contentLoaded: false,
@@ -37,8 +39,8 @@ export default {
         }
     },
 
-    methods: {
 
+    methods: {
         async getContentFromServer(){
             try {
                 const url = `http://127.0.0.5:85/3dsite_data.php`;
@@ -85,7 +87,7 @@ export default {
                     break;
                 }
             }
-        }
+        },
     },
 
 
@@ -140,6 +142,17 @@ body {
 		url('assets/fonts/BoxedExtralight.woff') format('woff'),
 		url('assets/fonts/BoxedExtralight.ttf') format('truetype');
 	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Boxed';
+	src: url('assets/fonts/BoxedLight.eot');
+	src: local('Boxed Light'), local('BoxedLight'),
+		url('assets/fonts/BoxedLight.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/BoxedLight.woff') format('woff'),
+		url('assets/fonts/BoxedLight.ttf') format('truetype');
+	font-weight: 300;
 	font-style: normal;
 }
 
