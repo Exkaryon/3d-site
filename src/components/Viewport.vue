@@ -1,10 +1,10 @@
 <template>
-    <div id="viewport" :style="viewport.CSS.text" :class="{collapse_fragments: $store.state.changeThemeProcess.viewpoint}">
+    <div id="viewport" :style="viewport.CSS.text" :class="{collapse_fragments: $store.state.changeThemeProcess.fragmentsAnimation}">
         <div class="wrapper" :style="wrapper.CSS.text" v-transformwrapper>
 
             <section v-for="cube in $store.state.content" :key="cube.name" :class="['cube', cube.name]" :style="[cubes.CSS.text.common, cubes.CSS.text.stack[cube.name]]" @click="$store.dispatch('interactiveNavi', $event.target)">
                 <article v-for="(article, sideName) in cube.sides" :key="sideName" :class="sideName" :data-name="article.name" :style="cubes.sidesCSS[sideName]">
-                    <h2 v-show="article.title">{{article.title}}</h2>
+                    <h2 v-show="article.title">{{article.title}}<span>2010 — 2012</span></h2>
                     <div v-html="article.description"></div>
                     <button v-show="article.title">Подробнее</button>
                 </article>
@@ -28,11 +28,7 @@ import Fragments from '@/components/ViewportElements/Fragments.vue';
 export default {
     components: {Fragments},
 
-
     name: 'Viewport',
-
-
-
 
     props: {
         contentLoaded: {
@@ -44,9 +40,7 @@ export default {
     },
 
 
-
-
-    data(){
+data(){
         return {
             win: {
                 width: window.innerWidth,
@@ -167,8 +161,6 @@ export default {
             },
         };
     },
-
-
 
 
     methods: {
@@ -364,7 +356,7 @@ export default {
             this.wrapper.rotate.degs[0] = this.wrapper.transformStates.defaultOverview.rotateY[0];
             this.wrapper.rotate.degs[1] = this.wrapper.transformStates.defaultOverview.rotateX[0];
             Object.assign(this.viewport.CSS.props, {
-                transform: this.transformPropsСloner(this.viewport.transformStates.fulcrum),
+                transform: this.transformPropsСloner(Object.assign(this.viewport.CSS.props.transform, this.viewport.transformStates.fulcrum)),
                 transition: ['all '+this.transTime.navi+'s ease', '']
             });
             Object.assign(this.wrapper.CSS.props, {
@@ -384,7 +376,6 @@ export default {
         },
 
 
-
         cubeRotation(edge){
             let edgeData = Object.assign([], this.cubes.orientations[edge]);
             let sequence = edgeData.shift();
@@ -401,10 +392,18 @@ export default {
         },
 
 
-        modalStateActivator(){
+        modalStateActivator(modalState){
+            if(modalState){
+                this.viewport.CSS.props.transform = {
+                    translateX: [-25, '%'],
+                    scale: [this.viewport.CSS.props.transform.scale[0], '']
+                }
+            }else{
+                delete this.viewport.CSS.props.transform.translateX;
+            }
+            this.viewport.CSS.props.transition = ['all '+this.transTime.navi+'s ease', ''];
             if(this.actionsLock){
                 clearTimeout(this.transTime.ids.navi);
-                this.viewport.CSS.props.transition = ['all '+this.transTime.navi+'s ease', ''];
                 this.wrapper.CSS.props.transition = ['all '+this.transTime.navi+'s ease', ''];
                 this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
                 this.wrapper.CSS.text = this.CSSTextCompilator(this.wrapper.CSS.props);
@@ -418,7 +417,6 @@ export default {
                 }, this.transTime.navi * 1000);
             }else{
                 clearTimeout(this.transTime.ids.modal)
-                this.viewport.CSS.props.transition = ['all '+this.transTime.navi+'s ease', ''];
                 this.viewport.CSS.text = this.CSSTextCompilator(this.viewport.CSS.props);
                 this.transTime.ids.modal = setTimeout(() => {
                     delete this.viewport.CSS.props.transition;
@@ -517,8 +515,8 @@ export default {
             this.toFulcrum();
         },
 
-        modalActive(){
-            this.modalStateActivator();
+        modalActive(nVal){
+            this.modalStateActivator(nVal);
         },
 
         changeThemeViewpoint(nVal){
@@ -532,9 +530,6 @@ export default {
 
 
 <style lang="scss">
-.modalactive #viewport {
-    left:-25%;
-}
 #viewport {
     position: fixed;
     left: 0;

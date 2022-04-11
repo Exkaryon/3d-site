@@ -66,14 +66,11 @@ export default createStore({
         interactiveNavi({state, commit}, elem){
             const cubeName = elem.closest('section').classList[1];
             const cubeSide = elem.closest('article');
-            console.log(elem)
             switch(elem.tagName.toLowerCase()){
                 case 'button':
                     commit('setSelectedCube', cubeName);
                     commit('setActiveCubeSide', cubeSide.classList[0]);
-                    if(!state.actionsLock){
-                        commit('setActiveModal', true);
-                    }
+                    commit('setActiveModal', true);
                     break;
                 case 'article':
                 case 'div':

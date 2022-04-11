@@ -28,8 +28,8 @@
                     <div>Текущая оценка: <b>{{ performanceLag }}</b></div>
                     <div class="note">
                         <div><b style="color:lime">&lt; 750</b> <span>Высокая <small>(Рабочие станции, ноутбуки, планшеты)</small></span></div>
-                        <div><b style="color:orange">&gt; 750 — 1500</b> <span>Средняя <small>(Смартфоны, планшеты, устаревшие компьютеры)</small></span></div>
-                        <div><b style="color:red">> 1500</b> <span>Низкая <small>(Устаревшие устройства, микрокомпьютеры)</small></span></div>
+                        <div><b style="color:orange">750 — 1500</b> <span>Средняя <small>(Смартфоны, планшеты, устаревшие компьютеры)</small></span></div>
+                        <div><b style="color:red">&gt; 1500</b> <span>Низкая <small>(Устаревшие устройства, микрокомпьютеры)</small></span></div>
                     </div>
                 </div>
             </div>

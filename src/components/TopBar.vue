@@ -39,19 +39,21 @@ export default {
                 {title: 'Winter', active: false},
                 {title: 'Spring-summer', active: false},
             ],
-            transElemIndex: false,
+            transElemIndex: false,  // индекс выбранной опции из селектора для анимации изменения порядка.
         }
     },
 
     methods: {
         themeSelection(index, target){
             if(this.blockedSwitcher) return;
+            const selectedTheme = target.innerText.toLowerCase();
+            if(this.$store.state.activeTheme == selectedTheme) return;
             this.transElemIndex = index;
             setTimeout(() => {
                 this.themes.forEach(t => { t.active = t.title == target.innerText ? true : false; });
                 this.themes.sort((a,b) => b.active - a.active);
                 this.transElemIndex = false;
-                this.$store.dispatch('changeTheme', target.innerText.toLowerCase());
+                this.$store.dispatch('changeTheme', selectedTheme);
             }, 500);
         }
     },
@@ -251,6 +253,14 @@ export default {
     }
 }
 
+@media (max-width:1099px){
+    #topbar {
+        .fulcrum {
+            margin: 0 50px;
+        }
+    }
+}
+
 
 /* RESPONSIVE */
 @media (max-width:999px){
@@ -264,7 +274,7 @@ export default {
         .fulcrum {
             width: 28px;
             height: 28px;
-            margin:0 20px;
+            margin:0 0 0 20px;
             &::before{
                 width: 41px;
                 height: 41px;

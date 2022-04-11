@@ -1,12 +1,14 @@
 <template>
-    <div id="modal">
-    <div class="container" :class="{show: visibleContent}">
-        <h2>{{ article.title}}</h2>
-        <div v-html="article.fulltext"></div>
-    </div>
-    <div class="shadow">&nbsp;</div>
-    <div class="close" @click="$store.commit('setActiveModal', false)">Закрыть</div>
-</div>
+    <!-- <transition name="show"> -->
+        <div id="modal" :class="{active: $store.state.activeModal}"><!--  v-if="$store.state.activeModal" -->
+            <div class="container" :class="{show: visibleContent}">
+                <h2>{{ article.title }}<span v-if="article.tooltip">{{ article.tooltip }}</span></h2>
+                <div v-html="article.fulltext"></div>
+            </div>
+            <div class="shadow">&nbsp;</div>
+            <div class="close" @click="$store.commit('setActiveModal', false)">Закрыть</div>
+        </div>
+    <!-- </transition> -->
 </template>
 
 <script>
@@ -68,9 +70,19 @@ export default {
 
 
 <style lang="scss">
-.modalactive #modal {
+/* .fade-enter-active,
+.show-leave-active {
+    transition: all 0.7s ease;
     transform: translateX(0);
 }
+
+.show-enter-from,
+.show-leave-to {
+    opacity: 0;
+    transform: translateX(110%);
+}
+ */
+
 
 #modal {
     position: fixed;
@@ -100,6 +112,9 @@ export default {
         left:0;
         width: 1px;
         background: linear-gradient(0deg, #fff0, #fff9, #fff0);
+    }
+    &.active {
+        transform: translateX(0);
     }
     .container {
         padding:60px 20px 20px 40px;

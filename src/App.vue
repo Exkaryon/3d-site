@@ -1,5 +1,5 @@
 <template>
-    <div id="cover" :class="[performanceClass, $store.state.activeTheme, {modalactive: $store.state.activeModal}]">
+    <div id="cover" :class="[performanceClass, $store.state.activeTheme]">
         <top-bar></top-bar>
         <sub-menu></sub-menu>
         <viewport :contentLoaded="contentLoaded" :actualPerformance="actualPerformance"></viewport>
