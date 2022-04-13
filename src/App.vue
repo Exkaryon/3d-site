@@ -35,7 +35,15 @@ export default {
                 max: ['fast', 'normal'],        // Имя класса: [соответсвующие типы производительности - performanceTypes]
                 middle: ['middle', 'slow'],
                 low: ['veryslow'],
-            }
+            },
+            preloadElems: [
+                '/img/maple.png',
+                '/img/oak.png',
+                '/img/chestnut.png ',
+                '/img/liquidambar.png',
+                '/img/linden.png',
+                '/img/light_cube.jpg',
+            ]
         }
     },
 
@@ -88,13 +96,32 @@ export default {
                 }
             }
         },
+
+        async preloader(){
+            let loadedCount = 0;
+            await new Promise((resolve, reject) => {
+                const loadTimeoutId = setTimeout(resolve, 3000);
+                this.preloadElems.forEach(path => {
+                    const elem = document.createElement('img');
+                    elem.src = path;
+                    elem.addEventListener('load', () => {
+                        loadedCount++;
+                        if(loadedCount == this.preloadElems.length){
+                            clearInterval(loadTimeoutId);
+                            resolve();
+                        }
+                    });
+                });
+            });
+        }
     },
 
 
-    created(){
+    async created(){
         this.benchmark();
         this.checkPerformanceClass();
-        this.getContentFromServer();
+        await this.preloader();
+        await this.getContentFromServer();
     },
 
 }

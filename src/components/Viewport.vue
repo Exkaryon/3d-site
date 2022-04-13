@@ -51,7 +51,7 @@ data(){
                     navi: null,
                     modal: null,
                 },
-                intro: 1,
+                intro: 7,
                 navi: 1.5,
             },
             viewport: {
@@ -288,11 +288,11 @@ data(){
             // Изменить настоящие параметры для вьюпорта и обертки равные конечному положению анимации (опорному положению обзора).
             Object.assign(this.viewport.CSS.props, {
                 transform: this.transformPropsСloner(this.viewport.transformStates.defaultOverview),
-                transition: ['all '+this.transTime.intro+'s ease-in-out', '']
+                transition: ['all '+this.transTime.intro+'s cubic-bezier(0.46, -0.05, 0.59, 0.99)', '']
             });
             Object.assign(this.wrapper.CSS.props, {
                 transform: this.transformPropsСloner(this.wrapper.transformStates.defaultOverview),
-                transition: ['all '+this.transTime.intro+'s ease', '']
+                transition: ['all '+this.transTime.intro+'s cubic-bezier(0.46, -0.05, 0.59, 0.99)', '']
             });
             // Установить рассчетные параметры вращения обертки соответственно текущим параметрам трансформации.
             this.wrapper.rotate.degs[0] = this.wrapper.CSS.props.transform.rotateY[0];
@@ -652,7 +652,7 @@ data(){
             .wrapper {
                 .cube {
                     > article {
-                        background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                        background: url(/img/light_cube.jpg) center center no-repeat;
                         background-size: cover;
                         box-shadow: 0 0 45px #000 inset, 0 0 45px #f505;
                         text-shadow: 0 0 5px #000;
@@ -737,7 +737,7 @@ data(){
             .wrapper {
                 .cube {
                     > article {
-                        background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                        background: url(/img/light_cube.jpg) center center no-repeat;
                         background-size: cover;
                         box-shadow: 0 0 45px #000 inset, 0 0 45px #e6111c55;
                         border: none;
@@ -828,7 +828,7 @@ data(){
         #viewport {
             .wrapper {
                 .cube > article {
-                    background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                    background: url(/img/light_cube.jpg) center center no-repeat;
                     background-size: cover;
                     border: none;
                     button {
@@ -906,7 +906,7 @@ data(){
         #viewport {
             .wrapper {
                 .cube > article {
-                    background: url(../assets/images/light_cube.jpg) center center no-repeat;
+                    background: url(/img/light_cube.jpg) center center no-repeat;
                     background-size: cover;
                     border: none;
                     button {

@@ -135,11 +135,11 @@ export default {
     #viewport{
         .wrapper {
             .fragments {
-                &.maple {background: url(../../assets/images/maple.png) center center no-repeat;}
-                &.oak {background: url(../../assets/images/oak.png) center center no-repeat;}
-                &.chestnut {background: url(../../assets/images/chestnut.png) center center no-repeat;}
-                &.liquidambar {background: url(../../assets/images/liquidambar.png) center center no-repeat;}
-                &.linden {background: url(../../assets/images/linden.png) center center no-repeat;}
+                &.maple {background: url(/img/maple.png) center center no-repeat;}
+                &.oak {background: url(/img/oak.png) center center no-repeat;}
+                &.chestnut {background: url(/img/chestnut.png) center center no-repeat;}
+                &.liquidambar {background: url(/img/liquidambar.png) center center no-repeat;}
+                &.linden {background: url(/img/linden.png) center center no-repeat;}
             }
         }
     }
