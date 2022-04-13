@@ -1,0 +1,190 @@
+{
+  "cube1": {
+    "name": "cube1",
+    "title": "Cube 1",
+    "offset": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "sides": {
+      "front": {
+        "name": "cube1-side-front",
+        "title": "FrontSide C1",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "bottom": {
+        "name": "cube1-side-bottom",
+        "title": "BottomSide C1",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "top": {
+        "name": "cube1-side-top",
+        "title": "TopSide C1",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "left": {
+        "name": "cube1-side-left",
+        "title": "LeftSide C1",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "right": {
+        "name": "cube1-side-right",
+        "title": "RightSide C1",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "back": {
+        "name": "cube1-side-back",
+        "title": "BackSide C1",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      }
+    }
+  },
+  "cube2": {
+    "name": "cube2",
+    "title": "Cube 2",
+    "offset": {
+      "x": 2,
+      "y": 0,
+      "z": -10
+    },
+    "sides": {
+      "front": {
+        "name": "cube2-side-front",
+        "title": "FrontSide C2",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "bottom": {
+        "name": "cube2-side-bottom",
+        "title": "BottomSide C2",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "top": {
+        "name": "cube2-side-top",
+        "title": "TopSide C2",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "left": {
+        "name": "cube2-side-left",
+        "title": "LeftSide C2",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "right": {
+        "name": "cube2-side-right",
+        "title": "RightSide C2",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "back": {
+        "name": "cube2-side-back",
+        "title": "BackSide C2",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      }
+    }
+  },
+  "cube3": {
+    "name": "cube3",
+    "title": "Cube 3",
+    "offset": {
+      "x": 3,
+      "y": -1,
+      "z": 0
+    },
+    "sides": {
+      "front": {
+        "name": "cube3-side-front",
+        "title": "FrontSide C3",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "bottom": {
+        "name": "cube3-side-bottom",
+        "title": "BottomSide C3",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "top": {
+        "name": "cube3-side-top",
+        "title": "TopSide C3",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "left": {
+        "name": "cube3-side-left",
+        "title": "LeftSide C3",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "right": {
+        "name": "cube3-side-right",
+        "title": "RightSide C3",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "back": {
+        "name": "cube3-side-back",
+        "title": "BackSide C3",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      }
+    }
+  },
+  "cube4": {
+    "name": "cube4",
+    "title": "Cube 4",
+    "offset": {
+      "x": 5,
+      "y": -4,
+      "z": 7
+    },
+    "sides": {
+      "front": {
+        "name": "cube4-side-front",
+        "title": "FrontSide C4",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "bottom": {
+        "name": "cube4-side-bottom",
+        "title": "BottomSide C4",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "top": {
+        "name": "cube4-side-top",
+        "title": "TopSide C4",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "left": {
+        "name": "cube4-side-left",
+        "title": "LeftSide C4",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "right": {
+        "name": "cube4-side-right",
+        "title": "RightSide C4",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      },
+      "back": {
+        "name": "cube4-side-back",
+        "title": "BackSide C4",
+        "description": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>",
+        "fulltext": "<p>The liquid compresses the gravitational excimer. Lepton is stable in a magnetic field. The excimer transforms the explosion one-dimensionally, and this is not surprising if we recall the quantum nature of the phenomenon. </p>                <p>In weakly alternating fields (with fluctuations at the level of units of percent), a quasar charges a thermodynamic pulsar. The stratification splits the short-lived hydrodynamic shock. The surface neutralizes the baryon beam regardless of the predictions of the self-consistent theoretical model of the phenomenon. In slightly variable fields (with fluctuations at the unit level percent) the flow of the medium is spontaneous. The hydrodynamic shock compresses the quantum.</p><p>The wave is reproducible in laboratory conditions. The suspension, even in the presence of strong attractors, consistently excites the quasar. An ideal heat engine, according to astronomical observations, concentrates an internuclear vortex as the signal propagates in an environment with an inverse population.</p>\r\n                "
+      }
+    }
+  }
+}

@@ -20,6 +20,7 @@ export default {
 
     data(){
         return {
+            contentURL: '/content.json',     // Адрес, откуда будет запрашиваться контент в JSON (Формат представлен в файле заглушке /content.json).
             contentLoaded: false,
             performanceLag: 0,
             actualPerformance: null,
@@ -51,14 +52,13 @@ export default {
     methods: {
         async getContentFromServer(){
             try {
-                const url = `http://127.0.0.5:85/3dsite_data.php`;
-                const response = await fetch(url, { method:'GET' });
-                if(!response.ok) throw new Error(url); 
+                const response = await fetch(this.contentURL, { method:'GET' });
+                if(!response.ok) throw new Error(this.contentURL); 
                 const data = await response.json();
                 this.$store.commit('setContent', data);
                 this.contentLoaded = true;
             } catch (error) {
-                console.warn(error);
+                console.warn(`Запрашиваемый адрес контента не доступен! \n ${error} — ${this.contentURL}`);
             }
         },
 

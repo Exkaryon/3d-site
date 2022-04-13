@@ -11,14 +11,6 @@ import ManualInfo from './components/ManualInfo.vue'
 
 import openator from './directives/VOpenator.js'
 import transformwrapper from './directives/VTransformwrapper.js'
-//const app = Vue.createApp(App);
-
-
-
-// Components
-
-
-//const app = createApp(App);
 
 
 createApp(App)
@@ -31,22 +23,3 @@ createApp(App)
     .directive('transformwrapper', transformwrapper)
     .use(store)
     .mount('#app');
-
-
-/*
-// Регистрация компонентов
-components.forEach(comp => {
-    app.component(comp.name, comp);
-});
-
-// Регистрация пользовательских директив
-directives.forEach(directive => {
-    app.directive(directive.name, directive);
-});
-
-
-app
-    .use(router)
-    .use(store)
-    .mount('#app');
-*/
