@@ -578,6 +578,9 @@ data(){
                         display: none;
                     }
                 }
+                div {
+                    width: 100%;
+                }
                 p {
                     font-size: 120%;
                     line-height: 130%;
